@@ -1,3 +1,6 @@
 "Pepperoni's Pizza" by Shane Toma
 
-Example Location is a room. 
+When play begins:
+	say 
+
+The Pizzeria is a room.
