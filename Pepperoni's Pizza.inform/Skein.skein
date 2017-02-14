@@ -4,7 +4,19 @@
     <generator>Inform Mac Client (Inform version 1.64/6.33/6M62)</generator>
     <item nodeId="node-1002">
         <command xml:space="preserve">Pepperoni's Pizza</command>
-        <result xml:space="preserve"></result>
+        <result xml:space="preserve">
+
+
+You are a cat who's owner is runs the most popular pizzeria in town. Today your owner is sick but there are too many orders leave undone. Your mission is to learn how to make pizza and fill in the orders for the day. Good Luck!
+
+Pepperoni's Pizza
+An Interactive Fiction by Shane Toma
+Release 1 / Serial number 170214 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+Pizzeria
+The front of the restaurant where the customers are served and where the pizza is brought out. Clean but a bit cramped with some tables and chairs. To the south is the kitchen.
+
+&gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
 </Skein>
