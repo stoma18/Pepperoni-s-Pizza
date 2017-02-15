@@ -28,7 +28,27 @@ The Bathroom is west of the Kitchen.
 
 The Staff Lounge is a room. "A clean room away from the hustle and bustle of the kitchen. A place for the cooks to relax and eat. Has a couch and a few tables and chairs."
 
-The Key is a thing. 
+blue is a thing. blue is in Bathroom. The printed name is "Big Blue Key".
+
+Safe is a container. Safe is locked and lockable. Blue unlocks Safe.
+
+Instead of taking blue:
+	if player has pillow:
+		move blue to player;
+	otherwise:
+		say "sorry, You gotta see it first."	
+
+
+
+The Pillow is a thing. 
+
+The Pillow is in the Staff Lounge.
+
+Understand "move [something]" as moving. Moving is an action applying to one thing.
+
+Instead of moving pillow:
+	say "You moved the Pillow revealing a Key.";
+	move pillow to player.
 
 The Staff Lounge is south of the Backroom.
 
