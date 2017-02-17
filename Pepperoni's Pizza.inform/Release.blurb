@@ -1,6 +1,6 @@
 ! Blurb file created by Inform build 6M62
 
-status "/Users/stoma18/Applications/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/stoma18/Documents/Pepperonis-Pizza/Pepperoni's Pizza.inform/Build/StatusCblorb.html"
+status "/Users/stoma18/Desktop/School/Comp Sci/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/stoma18/Documents/Pepperonis-Pizza/Pepperoni's Pizza.inform/Build/StatusCblorb.html"
 
 
 ! Identification
@@ -13,8 +13,8 @@ release to "/Users/stoma18/Documents/Pepperonis-Pizza/Pepperoni's Pizza.material
 storyfile leafname "Pepperoni's Pizza.gblorb"
 storyfile "/Users/stoma18/Documents/Pepperonis-Pizza/Pepperoni's Pizza.inform/Build/output.ulx" include
 ifiction "/Users/stoma18/Documents/Pepperonis-Pizza/Pepperoni's Pizza.inform/Metadata.iFiction" include
-cover "/Users/stoma18/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
-picture 1 "/Users/stoma18/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
+cover "/Users/stoma18/Desktop/School/Comp Sci/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
+picture 1 "/Users/stoma18/Desktop/School/Comp Sci/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
 
 ! Placeholder variables
 

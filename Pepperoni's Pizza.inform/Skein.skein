@@ -11,17 +11,17 @@ You are a cat who's owner is runs the most popular pizzeria in town. Today your 
 
 Pepperoni's Pizza
 An Interactive Fiction by Shane Toma
-Release 1 / Serial number 170214 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 170216 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Pizzeria
 The front of the restaurant where the customers are served and where the pizza is brought out. Clean but a bit cramped with some tables and chairs. To the south is the kitchen.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1376"></child>
+        <children><child nodeId="node-1003"></child>
         </children>
     </item>
-    <item nodeId="node-1376">
+    <item nodeId="node-1003">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Kitchen
@@ -29,21 +29,23 @@ The Kitchen is where all the pizza is baked and created. The church of pizza. It
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1377"></child>
+        <children><child nodeId="node-1004"></child>
         </children>
     </item>
-    <item nodeId="node-1377">
+    <item nodeId="node-1004">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Backroom
 The Backroom was created as a secondary are to cook. There are ovens and pots used for food prep. Cleaner and less cluttered than the kitchen.
 
+You can see Chris here.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1378"></child>
+        <children><child nodeId="node-1005"></child>
         </children>
     </item>
-    <item nodeId="node-1378">
+    <item nodeId="node-1005">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Staff Lounge
@@ -53,10 +55,40 @@ You can see a Pillow here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1379"></child>
+        <children><child nodeId="node-1006"></child>
+            <child nodeId="node-1012"></child>
         </children>
     </item>
-    <item nodeId="node-1379">
+    <item nodeId="node-1012">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Backroom
+The Backroom was created as a secondary are to cook. There are ovens and pots used for food prep. Cleaner and less cluttered than the kitchen.
+
+You can see Chris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1013"></child>
+        </children>
+    </item>
+    <item nodeId="node-1013">
+        <command xml:space="preserve">talk to Chris</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1014"></child>
+        </children>
+    </item>
+    <item nodeId="node-1014">
+        <command xml:space="preserve">x chris</command>
+        <result xml:space="preserve">Chris is an assistant cook. He looks like he could be useful.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1006">
         <command xml:space="preserve">move pillow</command>
         <result xml:space="preserve">Nothing obvious happens.
 

@@ -10,6 +10,8 @@ The Kitchen is a room. "The Kitchen is where all the pizza is baked and created.
 
 The Kitchen is south of the Pizzeria.
 
+The Oven is a container. 
+
 The Storage Room is a room. "Dark and musky. Used to hold things like utensils and pizza boxes. Boxes stacked as high as the ceiling. Organized but cluttered in some parts."
 
 The Storage Room is east of the Kitchen.
@@ -21,6 +23,12 @@ The Freezer is east of the Backroom.
 The Backroom is a room. "The Backroom was created as a secondary are to cook. There are ovens and pots used for food prep. Cleaner and less cluttered than the kitchen."
 
 The Backroom is south of the Kitchen.
+
+Chris is a man in the Backroom. The description is "Chris is an assistant cook. He looks like he could be useful."
+
+Talking is an action applying to one visible thing. Understand "talk to [someone]" as talking.
+Check talking: say "[The noun] doesn't reply."
+
 
 The Bathroom is a room. "A Bathroom for both customers and employees. Often cleaned and kept in good condition."
 
@@ -59,4 +67,14 @@ The Office is south of the Staff Lounge.
 The Back Alley is a room. "At the very back of the whole Pizzeria, it connects to an alley in back. There is a dumpster and trash cans. There is a distinct smell the resonates in the air."
 
 The Back Alley is south of the Office.
+
+Recipe is a thing. The description of recipe is "To make a Pepperoni Pizza you need dough, cheese, sauce, and pepperoni. To make a Hawaiian PIzza you need dough, cheese, sauce, pineapple, ham. To make a cheese pizza you need dough, cheese, and sauce. When cooking any pizza, use oven to cook the dough and then add the toppings."
+
+
+
+The Dough is a thing.
+
+The Cheese is a thing.
+
+The Sauce is a thing.
 
