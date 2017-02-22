@@ -10,7 +10,7 @@ The Kitchen is a room. "The Kitchen is where all the pizza is baked and created.
 
 The Kitchen is south of the Pizzeria.
 
-The Oven is a container. 
+The Oven is a container. The Oven is closed and openable.
 
 The Storage Room is a room. "Dark and musky. Used to hold things like utensils and pizza boxes. Boxes stacked as high as the ceiling. Organized but cluttered in some parts."
 
@@ -36,27 +36,21 @@ The Bathroom is west of the Kitchen.
 
 The Staff Lounge is a room. "A clean room away from the hustle and bustle of the kitchen. A place for the cooks to relax and eat. Has a couch and a few tables and chairs."
 
-blue is a thing. blue is in Bathroom. The printed name is "Big Blue Key".
+blue is a thing.  The printed name is "Key".
 
-Safe is a container. Safe is locked and lockable. Blue unlocks Safe.
+Safe is a container. Safe is locked and lockable, closed and openable. Blue unlocks Safe.
 
-Instead of taking blue:
-	if player has pillow:
-		move blue to player;
-	otherwise:
-		say "sorry, You gotta see it first."	
+The Safe is in the office.
 
-
-
-The Pillow is a thing. 
+The Pillow is a thing.    
 
 The Pillow is in the Staff Lounge.
 
 Understand "move [something]" as moving. Moving is an action applying to one thing.
 
 Instead of moving pillow:
-	say "You moved the Pillow revealing a Key.";
-	move pillow to player.
+	say "You moved the Pillow revealing a Key. You now have the key";
+	move blue to player.
 
 The Staff Lounge is south of the Backroom.
 
@@ -71,10 +65,12 @@ The Back Alley is south of the Office.
 Recipe is a thing. The description of recipe is "To make a Pepperoni Pizza you need dough, cheese, sauce, and pepperoni. To make a Hawaiian PIzza you need dough, cheese, sauce, pineapple, ham. To make a cheese pizza you need dough, cheese, and sauce. When cooking any pizza, use oven to cook the dough and then add the toppings."
 
 
+ The Recipe is in the safe.
 
-The Dough is a thing.
 
-The Cheese is a thing.
+The Dough is a thing. The description of Dough is "The basis of all pizza. Made from flour and yeast. Kneaded to perfection."
 
-The Sauce is a thing.
+The Cheese is a thing. The description of Cheese is "Mozzarella cheese as a topping for all pizzas."
+
+The Sauce is a thing. The description of Sauce is "Homemade tomato sauce cooked by the owner each day. There is left over from yesterday enough to use today."
 
