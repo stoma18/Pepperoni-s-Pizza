@@ -20,7 +20,7 @@ Instead of opening oven:
 	if player is carrying Dough:
 		if player is carrying Cheese:
 			if player is carrying sauce:
-				say "you now have a pizza";
+				say "you now have a  Cheese Pizza";
 				now player has pizza;
 	otherwise:
 		say "You don't have the right ingrediants to make the pizza".			
@@ -41,9 +41,11 @@ Talking is an action applying to one visible thing. Understand "talk to [someone
 
 Chris is a man in the Backroom. The description is "Chris is an assistant cook. He looks like he could be useful."
 
-Talking is an action applying to one visible thing. Understand "talk to [someone]" as talking.
+Talking to is an action applying to one visible thing. Understand "talk to [someone]" as talking.
 Check talking: say "[The noun] doesn't reply."
 
+Instead of talking to Troy:
+	say "[one of]'Hello,' greeting Chris. [paragraph break]'How are you?' he asks.[or]'I'm trying to make pizzas for my owner. Could you help me out?' you say.[paragraph break]'Yes I think I can help with that.' Chris replies. 'You need to be able to fill out the orders that are coming. Make the pizzas and I'll get them to the customers.'[or]'Okay thanks. What should I do first you ask.'[paragraph break]'I'll send you off on your first order. Go make a cheese pizza and bring it back to me,' he says.'[or]You go off and try to make the first pizza.[stopping]".
 
 The Bathroom is a room. "A Bathroom for both customers and employees. Often cleaned and kept in good condition."
 
@@ -105,6 +107,7 @@ The Dough is inside the box.
 The Cheese is inside the box.
 
 The Sauce is inside the box.
+
 
 
 
