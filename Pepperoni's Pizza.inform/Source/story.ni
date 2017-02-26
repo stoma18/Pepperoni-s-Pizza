@@ -3,14 +3,17 @@
 When play begins:
 	say "You are a cat who's owner is runs the most popular pizzeria in town. Today your owner is sick but there are too many orders leave undone. Your mission is to learn how to make pizza and fill in the orders for the day. Good Luck!"
 	
+Description of player is "A calico cat that is a little chubby from eating pizza scraps. You have the ability to speak to humans."
 
 The Pizzeria is a room. "The front of the restaurant where the customers are served and where the pizza is brought out. Clean but a bit cramped with some tables and chairs. To the south is the kitchen."
 
-The Kitchen is a room. "The Kitchen is where all the pizza is baked and created. The church of pizza. It's a little messy and seems to be hectic when busy."
+The Kitchen is a room. "The Kitchen is where all the pizza is baked and created. The church of pizza. It's a little messy and seems to be hectic when busy. To the South is the Backroom. The Storage room is to the east and to the west is the Bathroom."
 
 The Kitchen is south of the Pizzeria.
 
 The Oven is a container. The Oven is closed and openable. The Oven is in the kitchen. The description of the the Oven is "Professional grade oven used to fire pizzas to perfection."
+Instead of taking Oven:
+	say "You can't move that, you're a cat."
 
 Pizza is a thing in kitchen. Pizza is undescribed. 
 Instead of taking pizza:
@@ -33,49 +36,51 @@ The Freezer is a room. "A huge freezer, extremely cold inside. Boxes that hold f
 
 The Freezer is east of the Backroom.
 
-The Backroom is a room. "The Backroom was created as a secondary are to cook. There are ovens and pots used for food prep. Cleaner and less cluttered than the kitchen."
+The Backroom is a room. "The Backroom was created as a secondary are to cook. There are ovens and pots used for food prep. Cleaner and less cluttered than the kitchen. The Staff Lounge is to the South. To the east is the Freezer."
 
 The Backroom is south of the Kitchen.
 
 Talking is an action applying to one visible thing. Understand "talk to [someone]" as talking to.
 
-Chris is a man in the Backroom. The description is "Chris is an assistant cook. He looks like he could be useful."
+Chris is a man in the kitchen. The description is "Chris is an assistant cook. He looks like he could be useful."
 
 Talking to is an action applying to one visible thing. Understand "talk to [someone]" as talking.
 Check talking: say "[The noun] doesn't reply."
 
-Instead of talking to Troy:
-	say "[one of]'Hello,' greeting Chris. [paragraph break]'How are you?' he asks.[or]'I'm trying to make pizzas for my owner. Could you help me out?' you say.[paragraph break]'Yes I think I can help with that.' Chris replies. 'You need to be able to fill out the orders that are coming. Make the pizzas and I'll get them to the customers.'[or]'Okay thanks. What should I do first you ask.'[paragraph break]'I'll send you off on your first order. Go make a cheese pizza and bring it back to me,' he says.'[or]You go off and try to make the first pizza.[stopping]".
+Instead of talking to Chris:
+	say "[one of]'Hello,' greeting Chris. [paragraph break]'How are you?' he asks.[or]'I'm trying to make pizzas for my owner. Could you help me out?' you say.[paragraph break]'Yes I think I can help with that.' Chris replies. 'You need to be able to fill out the orders that are coming. Make the pizzas and I'll get them to the customers.'[or]'Okay thanks. What should I do first you ask.'[paragraph break]'I'll send you off on your first order. Find the recipe somewhere in the restaurant then come and see me.'[or]You go off looking for the recipe.[stopping]".
+	
 
-The Bathroom is a room. "A Bathroom for both customers and employees. Often cleaned and kept in good condition."
+
+The Bathroom is a room. "A Bathroom for both customers and employees. Often cleaned and kept in good condition. There is cabinet next to the sink."
 
 The Bathroom is west of the Kitchen.
 
-The Staff Lounge is a room. "A clean room away from the hustle and bustle of the kitchen. A place for the cooks to relax and eat. Has a couch and a few tables and chairs."
+The Staff Lounge is a room. "A clean room away from the hustle and bustle of the kitchen. A place for the cooks to relax and eat. Has a couch and a few tables and chairs. To the south is the Office."
 
-blue is a thing.  The printed name is "Key".
+Key is a thing. The description of key is "A small yellow key that can be easily concealed. Has a little loop of string at the end to hold."
 
-Safe is a container. Safe is locked and lockable, closed and openable. Blue unlocks Safe.
+key is in the cabinet.
 
-The Safe is in the office.
+The Cabinet is a container. The Cabinet is in the bathroom. The Cabinet is closed and openable. 
 
-The Pillow is a thing.    
+Safe is a container. Safe is locked and lockable, closed and openable. key unlocks Safe.
 
-The Pillow is in the Staff Lounge.
+The Safe is in the office. The description of the safe is "A small iron safe with a key whole on the side to unlock it."
 
-Understand "move [something]" as moving. Moving is an action applying to one thing.
-
-Instead of moving pillow:
-	say "You moved the Pillow revealing a Key. You now have the key";
-	move blue to player.
 
 The Staff Lounge is south of the Backroom.
 
-The Office is a room. "Where your owner does his business and works. The office has a desk and safe. The key to the safe is missing. I wonder where it is..."
+The Office is a room. "Where your owner does his business and works. The office has a desk and safe. To the south is the Back Alley. The key to the safe is missing. I wonder where it is..."
+The desk is a thing. The desk is in the office. The desk is undescribed. The description of the desk is "An old maple desk that has a polished top. Your owner really takes care of it."
 
 The Office is south of the Staff Lounge.
 
 The Back Alley is a room. "At the very back of the whole Pizzeria, it connects to an alley in back. There is a dumpster and trash cans. There is a distinct smell the resonates in the air."
+
+The dumpster is a thing. The dumpster is in the Back Alley. The dumpster is undescribed. The description of dumpster is "A rollable dumbster that seems filled to the top and should be emptied soon."
+
+The trash cans is a thing. The trash cans is in the Back Alley. The trash cans is undescribed. The description of trash cans is "Two metal trash cans used for throwing out smaller trash. Inside is mostly pizza scraps and boxes."
 
 The Back Alley is south of the Office.
 
@@ -96,7 +101,7 @@ The Pineapple is a thing. The description of pineapple is "Large pineapples from
 
 The Pepperoni is a thing. The description of pepperoni is "The staple pizza topping. Large bunches already cut into slices."
 
-The Box is a container. The box is closed and openable. The box is in the Freezer. The description of the box is "A big box used to hold important ingrediants."
+The Box is a container. The box is closed and openable. The box is in the Freezer. The description of the box is "A big box used to hold important ingredients." 
 
 The Pepperoni is inside the box.
 
