@@ -7,17 +7,21 @@ Description of player is "A calico cat that is a little chubby from eating pizza
 
 The Pizzeria is a room. "The front of the restaurant where the customers are served and where the pizza is brought out. Clean but a bit cramped with some tables and chairs. You see three customers waiting to get their orders. To the south is the kitchen."
 
-Customer 1 is a man in the Pizzeria. The description is "A hunger customer that looks like he has been waiting for a while."
+Mike is a man in the Pizzeria. The description is "A hungery customer that looks eager to order his pizza."
+Instead of giving Mike the Cheese Pizza:
+	say "Mike happly recieves and pays for the pizza while giving you a nice tip.";
+	Remove Cheese Pizza from play;
+	Remove Mike from play.
 
-Customer 2 is a woman in the Pizzeria. The description is "A woman on her phone taking the order for the rest of her friends."
+Emily is a woman in the Pizzeria. The description is "A woman on her phone taking the order for the rest of her friends."
 
-Customer 3 is a man in the Pizzeria. The description is "A man that is drooling slightly while staring at the menu."
+Brad is a man in the Pizzeria. The description is "A man that is drooling slightly while staring at the menu."
 
-Instead of talking to Customer 1:
+Instead of talking to Mike:
 	say "'Hello' you greet him.[one of]'Hi could I just get a Cheese Pizza?' he orders.[paragraph break]'No problem, I'll have it ready for you soon.' you respond.[stopping]".
-Instead of talking to Customer 2:
+Instead of talking to Emily:
 	say "'Hi what could I get for you' you ask.[one of]'I'll have the Margherita pizza please' she says.[paragraph break]'Alright it will be ready soon.' you respond.[stopping]".
-Instead of talking to Customer 3:
+Instead of talking to Brad:
 	say "Hello, I can take your order when you are ready.' you say.[one of]'Hey I'll just get the Hawaiian Pizza.' he says.[paragraph break]'Okay it'll be out soon.' you reply.[stopping]".
 
 The Kitchen is a room. "The Kitchen is where all the pizza is baked and created. The church of pizza. It's a little messy and seems to be hectic when busy. To the South is the Backroom. The Storage room is to the east and to the west is the Bathroom."
@@ -30,9 +34,23 @@ Instead of taking Oven:
 
 Understand "mix" as mixing. Mixing is an action applying to nothing.
 
+Table of Recipes
+ingredient list	result
+{dough, sauce, cheese}	Cheese Pizza
+{dough, sauce, cheese, basil}	Margherita Pizza
+{dough, sauce, cheese, pineapple, ham}	Hawaiian Pizza
+
+
 Pizza is a thing in kitchen. Pizza is undescribed. 
 Instead of taking pizza:
 	say "you have to make it, it's not gonna fall out of thin air!"
+
+
+Cheese Pizza is a thing.
+
+Margherita Pizza is a thing.
+
+Hawaiian Pizza is a thing.
 
 Instead of opening oven:
 	if player is carrying Dough:
