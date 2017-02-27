@@ -7,6 +7,19 @@ Description of player is "A calico cat that is a little chubby from eating pizza
 
 The Pizzeria is a room. "The front of the restaurant where the customers are served and where the pizza is brought out. Clean but a bit cramped with some tables and chairs. To the south is the kitchen."
 
+Customer 1 is a man in the Pizzeria. The description is "A hunger customer that looks like he has been waiting for a while."
+
+Customer 2 is a woman in the Pizzeria. The description is "A woman on her phone taking the order for the rest of her friends."
+
+Customer 3 is a man in the Pizzeria. The description is "A man that is drooling slightly while staring at the menu."
+
+Instead of talking to Customer 1:
+	say "'Hello' you greet him.[one of]'Hi, I'm just waiting on my order for a cheese pizza.' He replies.[paragraph break]'Ok got it, I'll get to it' you respond.[stopping]".
+Instead of talking to Customer 2:
+	say "'Hi how are you?' you ask.[one of]'I'm good. I already ordered my hawaiian pizza.' she replies.[paragraph break]'Alright it will be ready soon.' you respond.[stopping]".
+Instead of talking to Customer 3:
+	say "Hello' you greet him.[one of]'Hey. I just ordered a margherita pizza.' he says.[paragraph break]'Okay it'll be out soon.' you reply.[stopping]".
+
 The Kitchen is a room. "The Kitchen is where all the pizza is baked and created. The church of pizza. It's a little messy and seems to be hectic when busy. To the South is the Backroom. The Storage room is to the east and to the west is the Bathroom."
 
 The Kitchen is south of the Pizzeria.
@@ -48,8 +61,9 @@ Talking to is an action applying to one visible thing. Understand "talk to [some
 Check talking: say "[The noun] doesn't reply."
 
 Instead of talking to Chris:
-	say "[one of]'Hello,' greeting Chris. [paragraph break]'How are you?' he asks.[or]'I'm trying to make pizzas for my owner. Could you help me out?' you say.[paragraph break]'Yes I think I can help with that.' Chris replies. 'You need to be able to fill out the orders that are coming. Make the pizzas and I'll get them to the customers.'[or]'Okay thanks. What should I do first you ask.'[paragraph break]'I'll send you off on your first order. Find the recipe somewhere in the restaurant then come and see me.'[or]You go off looking for the recipe.[stopping]".
+	say "[one of]'Hello,' greeting Chris. [paragraph break]'How are you?' he asks.[or]'I'm trying to make pizzas for my owner. Could you help me out?' you say.[paragraph break]'Yes I think I can help with that.' Chris replies. 'You need to be able to fill out the orders that are coming. Make the pizzas for the customers at the front'[or]'Okay thanks. What should I do first you ask.'[paragraph break]'I'll send you off on your first order. Find the recipe somewhere in the restaurant then make the pizza.'[or]You go off looking for the recipe.[stopping]".
 	
+
 
 
 The Bathroom is a room. "A Bathroom for both customers and employees. Often cleaned and kept in good condition. There is cabinet next to the sink."
@@ -113,6 +127,10 @@ The Cheese is inside the box.
 
 The Sauce is inside the box.
 
+The Ham is inside the box.
 
+Instead of eating:
+	say "You are only allowed to eat cat food unless your owner gives you a few left overs."
+	
 
 

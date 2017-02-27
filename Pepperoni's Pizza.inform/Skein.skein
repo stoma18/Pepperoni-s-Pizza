@@ -16,9 +16,14 @@ Release 1 / Serial number 170226 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Pizzeria
 The front of the restaurant where the customers are served and where the pizza is brought out. Clean but a bit cramped with some tables and chairs. To the south is the kitchen.
 
+You can see Customer 1, Customer 2 and Customer 3 here.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1003"></child>
+            <child nodeId="node-1478"></child>
+            <child nodeId="node-1481"></child>
+            <child nodeId="node-1471"></child>
             <child nodeId="node-1129"></child>
         </children>
     </item>
@@ -29,13 +34,72 @@ The front of the restaurant where the customers are served and where the pizza i
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-1471">
+        <command xml:space="preserve">x customer 1</command>
+        <result xml:space="preserve">A hunger customer that looks like he has been waiting for a while.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1472"></child>
+        </children>
+    </item>
+    <item nodeId="node-1472">
+        <command xml:space="preserve">x customer 3</command>
+        <result xml:space="preserve">A man that is drooling slightly while staring at the menu.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1475"></child>
+        </children>
+    </item>
+    <item nodeId="node-1475">
+        <command xml:space="preserve">talk to customer 1</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1476"></child>
+        </children>
+    </item>
+    <item nodeId="node-1476">
+        <command xml:space="preserve">talk to customer 2</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1477"></child>
+        </children>
+    </item>
+    <item nodeId="node-1477">
+        <command xml:space="preserve">talk to chris</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1481">
+        <command xml:space="preserve">talk to customer 2</command>
+        <result xml:space="preserve">"Hi how are you?" you ask.
+"I'm good. I already ordered my hawaiian pizza." she replies.
+
+"Alright it will be ready soon." you respond.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1478">
+        <command xml:space="preserve">talk to customer 1</command>
+        <result xml:space="preserve">Hello" you greet him.
+"Hi, I'm just waiting on my order for a cheese pizza." He replies.
+
+"Ok got it, I'll get to it" you respond.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1003">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Kitchen
 The Kitchen is where all the pizza is baked and created. The church of pizza. It's a little messy and seems to be hectic when busy. To the South is the Backroom. The Storage room is to the east and to the west is the Bathroom.
 
-You can see an Oven (closed) here.
+You can see an Oven (closed) and Chris here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -707,11 +771,10 @@ You can see Chris here.
 Backroom
 The Backroom was created as a secondary are to cook. There are ovens and pots used for food prep. Cleaner and less cluttered than the kitchen. The Staff Lounge is to the South. To the east is the Freezer.
 
-You can see Chris here.
-
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1005"></child>
+        <children><child nodeId="node-1459"></child>
+            <child nodeId="node-1005"></child>
         </children>
     </item>
     <item nodeId="node-1005">
@@ -1013,6 +1076,90 @@ You can see Chris here.
     <item nodeId="node-1026">
         <command xml:space="preserve">move pillow</command>
         <result xml:space="preserve">Nothing obvious happens.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1459">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Freezer
+A huge freezer, extremely cold inside. Boxes that hold frozen foods and ingrediants. Not that much is held inside and makes the freezer seem larger than it really is.
+
+You can see a Box (closed) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1468"></child>
+            <child nodeId="node-1460"></child>
+        </children>
+    </item>
+    <item nodeId="node-1460">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">(the Box)
+Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1461"></child>
+        </children>
+    </item>
+    <item nodeId="node-1461">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a Box (closed)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1462"></child>
+        </children>
+    </item>
+    <item nodeId="node-1462">
+        <command xml:space="preserve">open box</command>
+        <result xml:space="preserve">You open the Box, revealing a Dough, a Cheese, a Sauce, a Ham, a Pineapple and a Pepperoni.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1463"></child>
+        </children>
+    </item>
+    <item nodeId="node-1463">
+        <command xml:space="preserve">take cheese</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1464"></child>
+        </children>
+    </item>
+    <item nodeId="node-1464">
+        <command xml:space="preserve">eat cheese</command>
+        <result xml:space="preserve">That's plainly inedible.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1468">
+        <command xml:space="preserve">open box</command>
+        <result xml:space="preserve">You open the Box, revealing a Dough, a Cheese, a Sauce, a Ham, a Pineapple and a Pepperoni.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1469"></child>
+        </children>
+    </item>
+    <item nodeId="node-1469">
+        <command xml:space="preserve">take dough</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1470"></child>
+        </children>
+    </item>
+    <item nodeId="node-1470">
+        <command xml:space="preserve">eat dough</command>
+        <result xml:space="preserve">You are only allowed to eat cat food unless your owner gives you a few left overs.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
