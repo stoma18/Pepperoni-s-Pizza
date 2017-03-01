@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+
+<Skein rootNode="node-1485">
+    <generator>Inform Mac Client (Inform version 1.64/6.33/6M62)</generator>
+    <item nodeId="node-1485">
+        <command xml:space="preserve">Practice Mixing</command>
+        <result xml:space="preserve">
+
+
+Practice Mixing
+An Interactive Fiction by Shane Toma
+Release 1 / Serial number 170227 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+Example Location
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1595"></child>
+            <child nodeId="node-1488"></child>
+            <child nodeId="node-1498"></child>
+        </children>
+    </item>
+    <item nodeId="node-1498">
+        <command xml:space="preserve">x box</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1488">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1489"></child>
+        </children>
+    </item>
+    <item nodeId="node-1489">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Example Location
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1490"></child>
+        </children>
+    </item>
+    <item nodeId="node-1490">
+        <command xml:space="preserve">mix dough with sauce</command>
+        <result xml:space="preserve">I only understood you as far as wanting to mix.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1491"></child>
+        </children>
+    </item>
+    <item nodeId="node-1491">
+        <command xml:space="preserve">mix dough and sauce</command>
+        <result xml:space="preserve">I only understood you as far as wanting to mix.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1492"></child>
+        </children>
+    </item>
+    <item nodeId="node-1492">
+        <command xml:space="preserve">mix dough</command>
+        <result xml:space="preserve">I only understood you as far as wanting to mix.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1493"></child>
+        </children>
+    </item>
+    <item nodeId="node-1493">
+        <command xml:space="preserve">mix dough and sauce and cheese</command>
+        <result xml:space="preserve">I only understood you as far as wanting to mix.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1494"></child>
+        </children>
+    </item>
+    <item nodeId="node-1494">
+        <command xml:space="preserve">combine dough with sauce</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1495"></child>
+        </children>
+    </item>
+    <item nodeId="node-1495">
+        <command xml:space="preserve">combine dough and sauce</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1496"></child>
+        </children>
+    </item>
+    <item nodeId="node-1496">
+        <command xml:space="preserve">mix ingredients</command>
+        <result xml:space="preserve">I only understood you as far as wanting to mix.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1497"></child>
+        </children>
+    </item>
+    <item nodeId="node-1497">
+        <command xml:space="preserve">open box</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1595">
+        <command xml:space="preserve">mix ingrediant</command>
+        <result xml:space="preserve">You can't combine nothing into anything useful.
+Try another combination of ingredients.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1596"></child>
+        </children>
+    </item>
+    <item nodeId="node-1596">
+        <command xml:space="preserve">mix dough with cheese with sauce</command>
+        <result xml:space="preserve">I only understood you as far as wanting to mix.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1597"></child>
+        </children>
+    </item>
+    <item nodeId="node-1597">
+        <command xml:space="preserve">mix dough and cheese and sauce</command>
+        <result xml:space="preserve">I only understood you as far as wanting to mix.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1598"></child>
+        </children>
+    </item>
+    <item nodeId="node-1598">
+        <command xml:space="preserve">mix dough, sauce, cheese</command>
+        <result xml:space="preserve">I only understood you as far as wanting to mix.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1599"></child>
+        </children>
+    </item>
+    <item nodeId="node-1599">
+        <command xml:space="preserve">mix dough and sauce and cheese</command>
+        <result xml:space="preserve">I only understood you as far as wanting to mix.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1600"></child>
+        </children>
+    </item>
+    <item nodeId="node-1600">
+        <command xml:space="preserve">combine dough and sauce and cheese</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1601"></child>
+        </children>
+    </item>
+    <item nodeId="node-1601">
+        <command xml:space="preserve">mix cheese</command>
+        <result xml:space="preserve">I only understood you as far as wanting to mix.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1602"></child>
+        </children>
+    </item>
+    <item nodeId="node-1602">
+        <command xml:space="preserve">mix dough</command>
+        <result xml:space="preserve">I only understood you as far as wanting to mix.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1603"></child>
+        </children>
+    </item>
+    <item nodeId="node-1603">
+        <command xml:space="preserve">mix dough and cheese</command>
+        <result xml:space="preserve">I only understood you as far as wanting to mix.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1604"></child>
+        </children>
+    </item>
+    <item nodeId="node-1604">
+        <command xml:space="preserve">mix ingredients</command>
+        <result xml:space="preserve">I only understood you as far as wanting to mix.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1605"></child>
+        </children>
+    </item>
+    <item nodeId="node-1605">
+        <command xml:space="preserve">mix things in pizza pallet</command>
+        <result xml:space="preserve">You can't combine nothing into anything useful.
+Try another combination of ingredients.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1606"></child>
+        </children>
+    </item>
+    <item nodeId="node-1606">
+        <command xml:space="preserve">place cheese on pizza pallet</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+</Skein>

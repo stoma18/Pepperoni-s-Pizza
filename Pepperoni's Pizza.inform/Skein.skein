@@ -11,18 +11,20 @@ You are a cat who's owner is runs the most popular pizzeria in town. Today your 
 
 Pepperoni's Pizza
 An Interactive Fiction by Shane Toma
-Release 1 / Serial number 170226 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 170228 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Pizzeria
 The front of the restaurant where the customers are served and where the pizza is brought out. Clean but a bit cramped with some tables and chairs. You see three customers waiting to get their orders. To the south is the kitchen.
 
-You can see Customer 1, Customer 2 and Customer 3 here.
+You can see Mike, Emily and Brad here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1003"></child>
+        <children><child nodeId="node-1499"></child>
+            <child nodeId="node-1003"></child>
             <child nodeId="node-1478"></child>
             <child nodeId="node-1481"></child>
+            <child nodeId="node-1506"></child>
             <child nodeId="node-1471"></child>
             <child nodeId="node-1129"></child>
         </children>
@@ -69,6 +71,862 @@ You can see Customer 1, Customer 2 and Customer 3 here.
     <item nodeId="node-1477">
         <command xml:space="preserve">talk to chris</command>
         <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1506">
+        <command xml:space="preserve">talk to mike</command>
+        <result xml:space="preserve">"Hello" you greet him.
+"Hi could I just get a Cheese Pizza?" he orders.
+
+"No problem, I'll have it ready for you soon." you respond.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1507"></child>
+        </children>
+    </item>
+    <item nodeId="node-1507">
+        <command xml:space="preserve">x mike</command>
+        <result xml:space="preserve">A hungery customer that looks eager to order his pizza.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1508"></child>
+        </children>
+    </item>
+    <item nodeId="node-1508">
+        <command xml:space="preserve">talk to emily</command>
+        <result xml:space="preserve">"Hi what could I get for you" you ask.
+"I'll have the Margherita pizza please" she says.
+
+"Alright it will be ready soon." you respond.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1509"></child>
+        </children>
+    </item>
+    <item nodeId="node-1509">
+        <command xml:space="preserve">x emily</command>
+        <result xml:space="preserve">A woman on her phone taking the order for the rest of her friends.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1510"></child>
+        </children>
+    </item>
+    <item nodeId="node-1510">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying nothing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1511"></child>
+        </children>
+    </item>
+    <item nodeId="node-1511">
+        <command xml:space="preserve">x brad</command>
+        <result xml:space="preserve">A man that is drooling slightly while staring at the menu.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1512"></child>
+        </children>
+    </item>
+    <item nodeId="node-1512">
+        <command xml:space="preserve">talk to brad</command>
+        <result xml:space="preserve">Hello, I can take your order when you are ready." you say.
+"Hey I'll just get the Hawaiian Pizza." he says.
+
+"Okay it'll be out soon." you reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1513"></child>
+        </children>
+    </item>
+    <item nodeId="node-1513">
+        <command xml:space="preserve">x tables</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1514"></child>
+        </children>
+    </item>
+    <item nodeId="node-1514">
+        <command xml:space="preserve">x chairs</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1515"></child>
+        </children>
+    </item>
+    <item nodeId="node-1515">
+        <command xml:space="preserve">x fag</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1516"></child>
+        </children>
+    </item>
+    <item nodeId="node-1516">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Kitchen
+The Kitchen is where all the pizza is baked and created. The church of pizza. It's a little messy and seems to be hectic when busy. To the South is the Backroom. The Storage room is to the east and to the west is the Bathroom.
+
+You can see an Oven (closed) and Chris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1517"></child>
+        </children>
+    </item>
+    <item nodeId="node-1517">
+        <command xml:space="preserve">open oven</command>
+        <result xml:space="preserve">You don't have the right ingrediants to make the pizza
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1518"></child>
+        </children>
+    </item>
+    <item nodeId="node-1518">
+        <command xml:space="preserve">x chris</command>
+        <result xml:space="preserve">Chris is an assistant cook. He looks like he could be useful.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1519"></child>
+        </children>
+    </item>
+    <item nodeId="node-1519">
+        <command xml:space="preserve">talk to chris</command>
+        <result xml:space="preserve">"Hello," greeting Chris. 
+
+"How are you?" he asks.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1520"></child>
+        </children>
+    </item>
+    <item nodeId="node-1520">
+        <command xml:space="preserve">good</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1521"></child>
+        </children>
+    </item>
+    <item nodeId="node-1521">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1522"></child>
+        </children>
+    </item>
+    <item nodeId="node-1522">
+        <command xml:space="preserve">good</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1523"></child>
+        </children>
+    </item>
+    <item nodeId="node-1523">
+        <command xml:space="preserve">talk to christ</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1524"></child>
+        </children>
+    </item>
+    <item nodeId="node-1524">
+        <command xml:space="preserve">talk to chris</command>
+        <result xml:space="preserve">"I'm trying to make pizzas for my owner. Could you help me out?" you say.
+
+"Yes I think I can help with that." Chris replies. "You need to be able to fill out the orders that are coming. Make the pizzas for the customers at the front"
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1525"></child>
+        </children>
+    </item>
+    <item nodeId="node-1525">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">"Okay thanks. What should I do first you ask."
+
+"Go find out what the customers want then come back to ask me about the recipe for the recipe for each pizza."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1526"></child>
+        </children>
+    </item>
+    <item nodeId="node-1526">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1527"></child>
+        </children>
+    </item>
+    <item nodeId="node-1527">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">You go off on your way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1528"></child>
+        </children>
+    </item>
+    <item nodeId="node-1528">
+        <command xml:space="preserve">talk to chris</command>
+        <result xml:space="preserve">You go off on your way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1529"></child>
+        </children>
+    </item>
+    <item nodeId="node-1529">
+        <command xml:space="preserve">ask about hawaiian pizza</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1530"></child>
+        </children>
+    </item>
+    <item nodeId="node-1530">
+        <command xml:space="preserve">ask chris about hawaiian pizza</command>
+        <result xml:space="preserve">Pineapple, Ham, Cheese, Sauce, and Dough
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1531"></child>
+        </children>
+    </item>
+    <item nodeId="node-1531">
+        <command xml:space="preserve">ask chris about Cheese</command>
+        <result xml:space="preserve">Chris has nothing to say about Cheese.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1532"></child>
+        </children>
+    </item>
+    <item nodeId="node-1532">
+        <command xml:space="preserve"> ask chris about Cheese pizza</command>
+        <result xml:space="preserve">Cheese, Sauce, and Dough
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1533"></child>
+        </children>
+    </item>
+    <item nodeId="node-1533">
+        <command xml:space="preserve">ask chris about Margherita pizza</command>
+        <result xml:space="preserve">Basil, Cheese, Sauce, and Dough
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1534"></child>
+        </children>
+    </item>
+    <item nodeId="node-1534">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Kitchen
+The Kitchen is where all the pizza is baked and created. The church of pizza. It's a little messy and seems to be hectic when busy. To the South is the Backroom. The Storage room is to the east and to the west is the Bathroom.
+
+You can see an Oven (closed) and Chris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1535"></child>
+        </children>
+    </item>
+    <item nodeId="node-1535">
+        <command xml:space="preserve">open oven</command>
+        <result xml:space="preserve">You don't have the right ingrediants to make the pizza
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1536"></child>
+        </children>
+    </item>
+    <item nodeId="node-1536">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Backroom
+The Backroom was created as a secondary are to cook. There are ovens and pots used for food prep. Cleaner and less cluttered than the kitchen. The Staff Lounge is to the South. To the east is the Freezer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1537"></child>
+        </children>
+    </item>
+    <item nodeId="node-1537">
+        <command xml:space="preserve">x ovens</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1538"></child>
+        </children>
+    </item>
+    <item nodeId="node-1538">
+        <command xml:space="preserve">x pots</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1539"></child>
+        </children>
+    </item>
+    <item nodeId="node-1539">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Staff Lounge
+A clean room away from the hustle and bustle of the kitchen. A place for the cooks to relax and eat. Has a couch and a few tables and chairs. To the south is the Office.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1540"></child>
+        </children>
+    </item>
+    <item nodeId="node-1540">
+        <command xml:space="preserve">x couch</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1541"></child>
+        </children>
+    </item>
+    <item nodeId="node-1541">
+        <command xml:space="preserve">sit on couch</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1542"></child>
+        </children>
+    </item>
+    <item nodeId="node-1542">
+        <command xml:space="preserve">x tables</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1543"></child>
+        </children>
+    </item>
+    <item nodeId="node-1543">
+        <command xml:space="preserve">x chair</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1544"></child>
+        </children>
+    </item>
+    <item nodeId="node-1544">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Office
+Where your owner does his business and works. The office has a desk and safe. To the south is the Back Alley. The key to the safe is missing. I wonder where it is...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1545"></child>
+        </children>
+    </item>
+    <item nodeId="node-1545">
+        <command xml:space="preserve">x desk</command>
+        <result xml:space="preserve">An old maple desk that has a polished top. Your owner really takes care of it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1546"></child>
+        </children>
+    </item>
+    <item nodeId="node-1546">
+        <command xml:space="preserve">x safe</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1547"></child>
+        </children>
+    </item>
+    <item nodeId="node-1547">
+        <command xml:space="preserve">x safe</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1548"></child>
+        </children>
+    </item>
+    <item nodeId="node-1548">
+        <command xml:space="preserve">x safe</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1549"></child>
+        </children>
+    </item>
+    <item nodeId="node-1549">
+        <command xml:space="preserve">x safe</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1550"></child>
+        </children>
+    </item>
+    <item nodeId="node-1550">
+        <command xml:space="preserve">take key]</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1551"></child>
+        </children>
+    </item>
+    <item nodeId="node-1551">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">There are none at all available!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1552"></child>
+        </children>
+    </item>
+    <item nodeId="node-1552">
+        <command xml:space="preserve">take key</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1553"></child>
+        </children>
+    </item>
+    <item nodeId="node-1553">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Back Alley
+At the very back of the whole Pizzeria, it connects to an alley in back. There is a dumpster and trash cans. There is a distinct smell the resonates in the air.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1554"></child>
+        </children>
+    </item>
+    <item nodeId="node-1554">
+        <command xml:space="preserve">x dumpster</command>
+        <result xml:space="preserve">A rollable dumbster that seems filled to the top and should be emptied soon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1555"></child>
+        </children>
+    </item>
+    <item nodeId="node-1555">
+        <command xml:space="preserve">x trash cans</command>
+        <result xml:space="preserve">Two metal trash cans used for throwing out smaller trash. Inside is mostly pizza scraps and boxes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1556"></child>
+        </children>
+    </item>
+    <item nodeId="node-1556">
+        <command xml:space="preserve">take pizza scraps</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1557"></child>
+        </children>
+    </item>
+    <item nodeId="node-1557">
+        <command xml:space="preserve">take boxes</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1558"></child>
+        </children>
+    </item>
+    <item nodeId="node-1558">
+        <command xml:space="preserve">smell</command>
+        <result xml:space="preserve">You smell nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1559"></child>
+        </children>
+    </item>
+    <item nodeId="node-1559">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Office
+Where your owner does his business and works. The office has a desk and safe. To the south is the Back Alley. The key to the safe is missing. I wonder where it is...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1560"></child>
+        </children>
+    </item>
+    <item nodeId="node-1560">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Staff Lounge
+A clean room away from the hustle and bustle of the kitchen. A place for the cooks to relax and eat. Has a couch and a few tables and chairs. To the south is the Office.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1561"></child>
+        </children>
+    </item>
+    <item nodeId="node-1561">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Backroom
+The Backroom was created as a secondary are to cook. There are ovens and pots used for food prep. Cleaner and less cluttered than the kitchen. The Staff Lounge is to the South. To the east is the Freezer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1562"></child>
+        </children>
+    </item>
+    <item nodeId="node-1562">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Freezer
+A huge freezer, extremely cold inside. Boxes that hold frozen foods and ingrediants. Not that much is held inside and makes the freezer seem larger than it really is.
+
+You can see a Box (closed) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1563"></child>
+        </children>
+    </item>
+    <item nodeId="node-1563">
+        <command xml:space="preserve">open box</command>
+        <result xml:space="preserve">You open the Box, revealing Cheese Pizza, a Dough, a Sauce, a Pineapple and a Pepperoni.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1564"></child>
+        </children>
+    </item>
+    <item nodeId="node-1564">
+        <command xml:space="preserve">take cheese pizza</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1565"></child>
+        </children>
+    </item>
+    <item nodeId="node-1565">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">There are none at all available!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1566"></child>
+        </children>
+    </item>
+    <item nodeId="node-1566">
+        <command xml:space="preserve">take dough</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1567"></child>
+        </children>
+    </item>
+    <item nodeId="node-1567">
+        <command xml:space="preserve">take sauce</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1568"></child>
+        </children>
+    </item>
+    <item nodeId="node-1568">
+        <command xml:space="preserve">take pineapple</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1569"></child>
+        </children>
+    </item>
+    <item nodeId="node-1569">
+        <command xml:space="preserve">take pepperoni</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1570"></child>
+        </children>
+    </item>
+    <item nodeId="node-1570">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Backroom
+The Backroom was created as a secondary are to cook. There are ovens and pots used for food prep. Cleaner and less cluttered than the kitchen. The Staff Lounge is to the South. To the east is the Freezer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1571"></child>
+        </children>
+    </item>
+    <item nodeId="node-1571">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Kitchen
+The Kitchen is where all the pizza is baked and created. The church of pizza. It's a little messy and seems to be hectic when busy. To the South is the Backroom. The Storage room is to the east and to the west is the Bathroom.
+
+You can see an Oven (closed) and Chris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1572"></child>
+        </children>
+    </item>
+    <item nodeId="node-1572">
+        <command xml:space="preserve">open oven</command>
+        <result xml:space="preserve">you now have a  Cheese Pizza
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1573"></child>
+        </children>
+    </item>
+    <item nodeId="node-1573">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  Pizza
+  a Pepperoni
+  a Pineapple
+  a Sauce
+  a Dough
+  Cheese Pizza
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1574"></child>
+        </children>
+    </item>
+    <item nodeId="node-1574">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Pizzeria
+The front of the restaurant where the customers are served and where the pizza is brought out. Clean but a bit cramped with some tables and chairs. You see three customers waiting to get their orders. To the south is the kitchen.
+
+You can see Mike, Emily and Instead of giving Brad here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1575"></child>
+        </children>
+    </item>
+    <item nodeId="node-1575">
+        <command xml:space="preserve">give pizza to mike</command>
+        <result xml:space="preserve">Which do you mean, Pizza or Cheese Pizza?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1576"></child>
+        </children>
+    </item>
+    <item nodeId="node-1576">
+        <command xml:space="preserve">cheese</command>
+        <result xml:space="preserve">Mike happly recieves and pays for the pizza while giving you a nice tip.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1577"></child>
+        </children>
+    </item>
+    <item nodeId="node-1577">
+        <command xml:space="preserve">fuck off</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1578"></child>
+        </children>
+    </item>
+    <item nodeId="node-1578">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1579"></child>
+        </children>
+    </item>
+    <item nodeId="node-1579">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Kitchen
+The Kitchen is where all the pizza is baked and created. The church of pizza. It's a little messy and seems to be hectic when busy. To the South is the Backroom. The Storage room is to the east and to the west is the Bathroom.
+
+You can see an Oven (closed) and Chris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1580"></child>
+        </children>
+    </item>
+    <item nodeId="node-1580">
+        <command xml:space="preserve">open oven</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1581"></child>
+        </children>
+    </item>
+    <item nodeId="node-1581">
+        <command xml:space="preserve">insert i</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1582"></child>
+        </children>
+    </item>
+    <item nodeId="node-1582">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  Pizza
+  a Pepperoni
+  a Pineapple
+  a Sauce
+  a Dough
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1583"></child>
+        </children>
+    </item>
+    <item nodeId="node-1583">
+        <command xml:space="preserve">open oven</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1584"></child>
+        </children>
+    </item>
+    <item nodeId="node-1584">
+        <command xml:space="preserve">x pizza</command>
+        <result xml:space="preserve">You see nothing special about Pizza.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1585"></child>
+        </children>
+    </item>
+    <item nodeId="node-1585">
+        <command xml:space="preserve">eat pizza</command>
+        <result xml:space="preserve">You are only allowed to eat cat food unless your owner gives you a few left overs.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1586"></child>
+        </children>
+    </item>
+    <item nodeId="node-1586">
+        <command xml:space="preserve">eat pepperoni</command>
+        <result xml:space="preserve">You are only allowed to eat cat food unless your owner gives you a few left overs.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1587"></child>
+        </children>
+    </item>
+    <item nodeId="node-1587">
+        <command xml:space="preserve">fuck off</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1588"></child>
+        </children>
+    </item>
+    <item nodeId="node-1588">
+        <command xml:space="preserve">die</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1589"></child>
+        </children>
+    </item>
+    <item nodeId="node-1589">
+        <command xml:space="preserve">kill me</command>
+        <result xml:space="preserve">Violence isn't the answer to this one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1590"></child>
+        </children>
+    </item>
+    <item nodeId="node-1590">
+        <command xml:space="preserve">x me</command>
+        <result xml:space="preserve">A calico cat that is a little chubby from eating pizza scraps. You have the ability to speak to humans.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1591"></child>
+        </children>
+    </item>
+    <item nodeId="node-1591">
+        <command xml:space="preserve">FUCK NIGGERS</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1592"></child>
+        </children>
+    </item>
+    <item nodeId="node-1592">
+        <command xml:space="preserve">talk to chris</command>
+        <result xml:space="preserve">You go off on your way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1593"></child>
+        </children>
+    </item>
+    <item nodeId="node-1593">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Kitchen
+The Kitchen is where all the pizza is baked and created. The church of pizza. It's a little messy and seems to be hectic when busy. To the South is the Backroom. The Storage room is to the east and to the west is the Bathroom.
+
+You can see an Oven (closed) and Chris here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1594"></child>
+        </children>
+    </item>
+    <item nodeId="node-1594">
+        <command xml:space="preserve">make hawaiian pizza</command>
+        <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -1246,6 +2104,67 @@ Cheese: Taken.
 Sauce: Taken.
 Pineapple: Taken.
 Pepperoni: Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1499">
+        <command xml:space="preserve">nigger</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1500"></child>
+        </children>
+    </item>
+    <item nodeId="node-1500">
+        <command xml:space="preserve">kill me</command>
+        <result xml:space="preserve">Violence isn't the answer to this one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1501"></child>
+        </children>
+    </item>
+    <item nodeId="node-1501">
+        <command xml:space="preserve">x</command>
+        <result xml:space="preserve">What do you want to examine?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1502"></child>
+        </children>
+    </item>
+    <item nodeId="node-1502">
+        <command xml:space="preserve">me</command>
+        <result xml:space="preserve">A calico cat that is a little chubby from eating pizza scraps. You have the ability to speak to humans.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1503"></child>
+        </children>
+    </item>
+    <item nodeId="node-1503">
+        <command xml:space="preserve">nigger</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1504"></child>
+        </children>
+    </item>
+    <item nodeId="node-1504">
+        <command xml:space="preserve">kill mike</command>
+        <result xml:space="preserve">Violence isn't the answer to this one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1505"></child>
+        </children>
+    </item>
+    <item nodeId="node-1505">
+        <command xml:space="preserve">nigger faggot</command>
+        <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

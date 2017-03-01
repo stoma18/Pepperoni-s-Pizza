@@ -5,16 +5,21 @@ When play begins:
 	
 Description of player is "A calico cat that is a little chubby from eating pizza scraps. You have the ability to speak to humans."
 
+[disable take all]
+Rule for deciding whether all includes something: it does not.
+
 The Pizzeria is a room. "The front of the restaurant where the customers are served and where the pizza is brought out. Clean but a bit cramped with some tables and chairs. You see three customers waiting to get their orders. To the south is the kitchen."
 
 Mike is a man in the Pizzeria. The description is "A hungery customer that looks eager to order his pizza."
-Instead of giving Mike the Cheese Pizza:
-	say "Mike happly recieves and pays for the pizza while giving you a nice tip.";
-	Remove Cheese Pizza from play;
-	Remove Mike from play.
+Instead of giving Cheese Pizza to Mike:
+	if the cheese pizza is raw:
+		say "You need to bake it first";
+	otherwise:
+		say "Mike happly recieves and pays for the pizza while giving you a nice tip.";
+		Remove Cheese Pizza from play;
+		Remove Mike from play.
 
 Emily is a woman in the Pizzeria. The description is "A woman on her phone taking the order for the rest of her friends."
-
 Brad is a man in the Pizzeria. The description is "A man that is drooling slightly while staring at the menu."
 
 Instead of talking to Mike:
@@ -24,27 +29,19 @@ Instead of talking to Emily:
 Instead of talking to Brad:
 	say "Hello, I can take your order when you are ready.' you say.[one of]'Hey I'll just get the Hawaiian Pizza.' he says.[paragraph break]'Okay it'll be out soon.' you reply.[stopping]".
 
+A thing can be raw or baked. Things are usually
+ raw.
+
 The Kitchen is a room. "The Kitchen is where all the pizza is baked and created. The church of pizza. It's a little messy and seems to be hectic when busy. To the South is the Backroom. The Storage room is to the east and to the west is the Bathroom."
 
 The Kitchen is south of the Pizzeria.
 
-The Oven is a container. The Oven is closed and openable. The Oven is in the kitchen. The description of the the Oven is "Professional grade oven used to fire pizzas to perfection."
+The Oven is an open container. The Oven is in the kitchen. The description of the the Oven is "Professional grade oven used to fire pizzas to perfection."
 Instead of taking Oven:
 	say "You can't move that, you're a cat."
 
-Understand "mix" as mixing. Mixing is an action applying to nothing.
 
-Table of Recipes
-ingredient list	result
-{dough, sauce, cheese}	Cheese Pizza
-{dough, sauce, cheese, basil}	Margherita Pizza
-{dough, sauce, cheese, pineapple, ham}	Hawaiian Pizza
-
-
-Pizza is a thing in kitchen. Pizza is undescribed. 
-Instead of taking pizza:
-	say "you have to make it, it's not gonna fall out of thin air!"
-
+Pizza Pan is a container in the Kitchen. Pizza pan is open. Pizza Pan is fixed in place. The description of Pizza Pan is "Put ingredients in here and then COMBINE to make a pizza. Then take raw pizza out of pan and bake in oven. Do you know the recipe?"
 
 Cheese Pizza is a thing.
 
@@ -52,14 +49,70 @@ Margherita Pizza is a thing.
 
 Hawaiian Pizza is a thing.
 
-Instead of opening oven:
-	if player is carrying Dough:
-		if player is carrying Cheese:
-			if player is carrying sauce:
-				say "you now have a  Cheese Pizza";
-				now player has pizza;
-	otherwise:
-		say "You don't have the right ingrediants to make the pizza".			
+[special thanks to Mrs. Kiang for really helping me out on this section]
+Combining is an action applying to nothing. 
+Understand "combine" and "combine ingredients" as combining.
+
+The combining action has an object called the Substance. 
+
+Setting action variables for combining:
+	let X be a list of objects;
+	repeat with item running through things in pizza pan:
+		add item to X;
+	sort X;
+	repeat through the Table of Recipes:
+		let Y be the ingredient list entry;
+		sort Y;
+		if X is Y:
+			now the Substance is the result entry.
+			
+Check combining:
+	if Substance is nothing:
+		say "You can't combine [list of things in pizza pan] into anything useful.[line break] Try another combination of ingredients";
+		stop the action.
+			
+Carry out combining:
+	say "You combine [list of things in pizza pan].";
+	if dough is in pizza pan:
+		move dough to player;
+	if sauce is in pizza pan:
+		move sauce to player;
+	if shredded cheese is in pizza pan:
+		move shredded cheese to player;
+	repeat with item running through things in pizza pan:
+		remove item from play;
+	move the Substance to the pizza pan.
+
+Report combining:
+	say "You now have a [a substance] ready to take and put in the oven.".
+
+
+Table of Recipes
+ingredient list	result
+{dough, sauce, shredded cheese}	Cheese Pizza
+{dough, sauce, shredded cheese, basil}	Margherita Pizza
+{dough, sauce, shredded cheese, pineapple, ham}	Hawaiian Pizza
+
+An every turn rule:
+	if the Hawaiian pizza is in the oven for one turn:
+		say "You put the pizza in the oven and within minutes, you now have a Hawaiian Pizza freshly made and ready to be served. It smells so good!";
+		now the Hawaiian Pizza is baked;
+		now the description of the Cheese Pizza is "Baked to perfection.";
+		move Hawaiian Pizza to player.
+		
+An every turn rule:
+	if the Cheese Pizza is in the oven for one turn:
+		say "You put the pizza in the oven and in minutes, the Cheese Pizza is nicely cooked and is ready to be served!";
+		now the Cheese Pizza is baked;
+		now the description of the Cheese Pizza is "Baked to perfection.";
+		move Cheese Pizza to player.
+
+An every turn rule:
+	if the Margherita Pizza is in the oven for one turn:
+		say "You put the pizza in the oven and in minutes, the Margherita Pizza has been perfectly cooked and looks delicious to serve.";
+		now the Margherita Pizza is baked;
+		now the description of the Margherita Pizza is "Baked to perfection.";
+		move the Margherita Pizza to player.
 
 The Storage Room is a room. "Dark and musky. Used to hold things like utensils and pizza boxes. Boxes stacked as high as the ceiling. Organized but cluttered in some parts."
 
@@ -122,7 +175,7 @@ The Back Alley is south of the Office.
 
 The Dough is a thing. The description of Dough is "The basis of all pizza. Made from flour and yeast. Kneaded to perfection." The Dough is in the Box.
 
-The Cheese is a thing. The description of Cheese is "Mozzarella cheese as a topping for all pizzas." The Cheese is in the Box.
+The Shredded Cheese is a thing. The description of Cheese is "Mozzarella cheese as a topping for all pizzas." The Shredded Cheese is in the Box.
 
 The Sauce is a thing. The description of Sauce is "Homemade tomato sauce cooked by the owner each day. There is left over from yesterday enough to use today." The Sauce is in the Box.
 
@@ -136,8 +189,6 @@ The Ham is a thing. The description of ham is "Purchased daily from the local de
 
 The Box is a container. The box is closed and openable. The box is in the Freezer. The description of the box is "A big box used to hold important ingredients." 
 
-The Pepperoni is inside the box.
-
 The Pineapple is inside the box.
 
 The Dough is inside the box.
@@ -145,8 +196,16 @@ The Dough is inside the box.
 The Cheese is inside the box.
 
 The Sauce is inside the box.
+
+The Basil is inside the box.
+
+The Ham is inside the box.
 Instead of eating:
 	say "You are only allowed to eat cat food unless your owner gives you a few left overs."
 	
 
+An every turn rule:
+	if player is in Pizzeria:
+		if Mike is not visible and Emily is not visible and Brad is not visible:
+			end the story finally saying "You have successfully completed the orders for the customers! They all left with happily with their pizzas and you feel satisfied in becoming a pizza chef.[line break]Well done!"
 
