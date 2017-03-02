@@ -10,12 +10,16 @@ Rule for deciding whether all includes something: it does not.
 
 The Pizzeria is a room. "The front of the restaurant where the customers are served and where the pizza is brought out. Clean but a bit cramped with some tables and chairs. You see three customers waiting to get their orders. To the south is the kitchen."
 
-Mike is a man in the Pizzeria. The description is "A hungery customer that looks eager to order his pizza."
+Tables is a thing in the Pizzeria. The description of Tables is "Cleaned and polished wood grain tables."
+
+Chairs is a thing in the Pizzeria. The description of Chairs is "Wooden seats with a comfy cushion." Chairs is scenery.
+
+Mike is a man in the Pizzeria. The description is "A hungry customer that looks eager to order his pizza."
 Instead of giving Cheese Pizza to Mike:
 	if the cheese pizza is raw:
 		say "You need to bake it first";
 	otherwise:
-		say "Mike happly recieves and pays for the pizza while giving you a nice tip.";
+		say "Mike happily receives and pays for the pizza while giving you a nice tip.";
 		Remove Cheese Pizza from play;
 		Remove Mike from play.
 
@@ -118,7 +122,7 @@ The Storage Room is a room. "Dark and musky. Used to hold things like utensils a
 
 The Storage Room is east of the Kitchen.
 
-The Freezer is a room. "A huge freezer, extremely cold inside. Boxes that hold frozen foods and ingrediants. Not that much is held inside and makes the freezer seem larger than it really is."
+The Freezer is a room. "A huge freezer, extremely cold inside. Boxes that hold frozen foods and ingredients. Not that much is held inside and makes the freezer seem larger than it really is."
 
 The Freezer is east of the Backroom.
 
@@ -164,9 +168,9 @@ The desk is a thing. The desk is in the office. The desk is undescribed. The des
 
 The Office is south of the Staff Lounge.
 
-The Back Alley is a room. "At the very back of the whole Pizzeria, it connects to an alley in back. There is a dumpster and trash cans. There is a distinct smell the resonates in the air."
+The Back Alley is a room. "At the very back of the whole Pizzeria, it connects to an alley in back. There is a dumpster and trash cans. The atmosphere is dirty there is rubbish scattered around."
 
-The dumpster is a thing. The dumpster is in the Back Alley. The dumpster is undescribed. The description of dumpster is "A rollable dumbster that seems filled to the top and should be emptied soon."
+The dumpster is a thing. The dumpster is in the Back Alley. The dumpster is undescribed. The description of dumpster is "A rollable dumpster that seems filled to the top and should be emptied soon."
 
 The trash cans is a thing. The trash cans is in the Back Alley. The trash cans is undescribed. The description of trash cans is "Two metal trash cans used for throwing out smaller trash. Inside is mostly pizza scraps and boxes."
 
@@ -208,4 +212,5 @@ An every turn rule:
 	if player is in Pizzeria:
 		if Mike is not visible and Emily is not visible and Brad is not visible:
 			end the story finally saying "You have successfully completed the orders for the customers! They all left with happily with their pizzas and you feel satisfied in becoming a pizza chef.[line break]Well done!"
+
 

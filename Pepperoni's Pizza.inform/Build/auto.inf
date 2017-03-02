@@ -43,7 +43,7 @@ Global Story = BC_0;
 Constant Headline BC_1;
 Constant Story_Author BC_2;
 Release 1;
-Serial "170228";
+Serial "170301";
 
 Default Story 0;
 Default Headline 0;
@@ -4402,7 +4402,7 @@ Global lightflag = false;
 ! ListWriter.i6t: Memory
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant REQUISITION_STACK_SIZE = 3*43;
+Constant REQUISITION_STACK_SIZE = 3*45;
 Array requisition_stack --> REQUISITION_STACK_SIZE;
 Global requisition_stack_pointer = 0;
 
@@ -10548,13 +10548,13 @@ Constant IK1_First = I125_pizzeria;
 Constant IK2_First = selfobj;
 Constant IK3_First = I51_north;
 Constant IK4_First = nothing;
-Constant IK5_First = I130_oven;
+Constant IK5_First = I132_oven;
 Constant IK6_First = nothing;
 Constant IK7_First = nothing;
 Constant IK8_First = selfobj;
 Constant IK9_First = nothing;
-Constant IK10_First = I126_mike;
-Constant IK11_First = I127_emily;
+Constant IK10_First = I128_mike;
+Constant IK11_First = I129_emily;
 Constant IK12_First = nothing;
 Constant IK13_First = nothing;
 Constant IK14_First = nothing;
@@ -10574,15 +10574,15 @@ Constant DirectionObject_9 = I60_down;
 Constant DirectionObject_10 = in_obj;
 Constant DirectionObject_11 = out_obj;
 Array Map_Storage -->
- 0 0 0 I129_kitchen 0 0 0 0 0 0 0 0 ! Exits from: I125_pizzeria
- I125_pizzeria 0 0 I137_backroom 0 0 I135_storage_room I139_bathroom 0 0 0 0 ! Exits from: I129_kitchen
- 0 0 0 0 0 0 0 I129_kitchen 0 0 0 0 ! Exits from: I135_storage_room
- 0 0 0 0 0 0 0 I137_backroom 0 0 0 0 ! Exits from: I136_freezer
- I129_kitchen 0 0 I140_staff_lounge 0 0 I136_freezer 0 0 0 0 0 ! Exits from: I137_backroom
- 0 0 0 0 0 0 I129_kitchen 0 0 0 0 0 ! Exits from: I139_bathroom
- I137_backroom 0 0 I142_office 0 0 0 0 0 0 0 0 ! Exits from: I140_staff_lounge
- I140_staff_lounge 0 0 I144_back_alley 0 0 0 0 0 0 0 0 ! Exits from: I142_office
- I142_office 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I144_back_alley
+ 0 0 0 I131_kitchen 0 0 0 0 0 0 0 0 ! Exits from: I125_pizzeria
+ I125_pizzeria 0 0 I139_backroom 0 0 I137_storage_room I141_bathroom 0 0 0 0 ! Exits from: I131_kitchen
+ 0 0 0 0 0 0 0 I131_kitchen 0 0 0 0 ! Exits from: I137_storage_room
+ 0 0 0 0 0 0 0 I139_backroom 0 0 0 0 ! Exits from: I138_freezer
+ I131_kitchen 0 0 I142_staff_lounge 0 0 I138_freezer 0 0 0 0 0 ! Exits from: I139_backroom
+ 0 0 0 0 0 0 I131_kitchen 0 0 0 0 0 ! Exits from: I141_bathroom
+ I139_backroom 0 0 I144_office 0 0 0 0 0 0 0 0 ! Exits from: I142_staff_lounge
+ I142_staff_lounge 0 0 I146_back_alley 0 0 0 0 0 0 0 0 ! Exits from: I144_office
+ I144_office 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I146_back_alley
 ;
 
 Class VPH_Class;
@@ -11035,9 +11035,9 @@ Object selfobj ""
     with cap_short_name BC_143
     has mark_as_thing
     with IK2_Count 0
-    with IK2_Link I126_mike
+    with IK2_Link I126_tables
     with IK8_Count 0
-    with IK8_Link I126_mike
+    with IK8_Link I128_mike
     with KD_Count 8
     with parse_name Parse_Name_GV13
     with action_bitmap 0 0 0 0 0 0 
@@ -11055,7 +11055,7 @@ Object I125_pizzeria ""
     with room_index -1
     has mark_as_room
     with IK1_Count 0
-    with IK1_Link I129_kitchen
+    with IK1_Link I131_kitchen
     with KD_Count 1
     with name 'pizzeria' 'rooms//p' 
     with list_together BC_150
@@ -11063,21 +11063,17 @@ Object I125_pizzeria ""
     with article BC_152
 ;
 
-Object -> I126_mike ""
-    class K10_man
+Object -> I126_tables ""
+    class K2_thing
     with short_name BC_153
     with description BC_154
     has proper
     with vector 0
     has mark_as_thing
     with IK2_Count 1
-    with IK2_Link I127_emily
-    with IK8_Count 1
-    with IK8_Link I127_emily
-    with IK10_Count 0
-    with IK10_Link I128_brad
-    with KD_Count 10
-    with name 'mike' 'men//p' 
+    with IK2_Link I127_chairs
+    with KD_Count 2
+    with name 'tables' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_155
     with list_together BC_156
@@ -11085,21 +11081,19 @@ Object -> I126_mike ""
     with article BC_158
 ;
 
-Object -> I127_emily ""
-    class K11_woman
+Object -> I127_chairs ""
+    class K2_thing
     with short_name BC_159
     with description BC_160
     has proper
+    has static
+    has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 2
-    with IK2_Link I128_brad
-    with IK8_Count 2
-    with IK8_Link I128_brad
-    with IK11_Count 0
-    with IK11_Link nothing
-    with KD_Count 11
-    with name 'emily' 'women//p' 
+    with IK2_Link I128_mike
+    with KD_Count 2
+    with name 'chairs' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_161
     with list_together BC_162
@@ -11107,7 +11101,7 @@ Object -> I127_emily ""
     with article BC_164
 ;
 
-Object -> I128_brad ""
+Object -> I128_mike ""
     class K10_man
     with short_name BC_165
     with description BC_166
@@ -11115,13 +11109,13 @@ Object -> I128_brad ""
     with vector 0
     has mark_as_thing
     with IK2_Count 3
-    with IK2_Link I130_oven
-    with IK8_Count 3
-    with IK8_Link I138_chris
-    with IK10_Count 1
-    with IK10_Link I138_chris
+    with IK2_Link I129_emily
+    with IK8_Count 1
+    with IK8_Link I129_emily
+    with IK10_Count 0
+    with IK10_Link I130_brad
     with KD_Count 10
-    with name 'brad' 'men//p' 
+    with name 'mike' 'men//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_167
     with list_together BC_168
@@ -11129,79 +11123,79 @@ Object -> I128_brad ""
     with article BC_170
 ;
 
-Object I129_kitchen ""
-    class K1_room
+Object -> I129_emily ""
+    class K11_woman
     with short_name BC_171
     with description BC_172
+    has proper
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 4
+    with IK2_Link I130_brad
+    with IK8_Count 2
+    with IK8_Link I130_brad
+    with IK11_Count 0
+    with IK11_Link nothing
+    with KD_Count 11
+    with name 'emily' 'women//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with initial BC_173
+    with list_together BC_174
+    with plural BC_175
+    with article BC_176
+;
+
+Object -> I130_brad ""
+    class K10_man
+    with short_name BC_177
+    with description BC_178
+    has proper
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 5
+    with IK2_Link I132_oven
+    with IK8_Count 3
+    with IK8_Link I140_chris
+    with IK10_Count 1
+    with IK10_Link I140_chris
+    with KD_Count 10
+    with name 'brad' 'men//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with initial BC_179
+    with list_together BC_180
+    with plural BC_181
+    with article BC_182
+;
+
+Object I131_kitchen ""
+    class K1_room
+    with short_name BC_183
+    with description BC_184
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 1
-    with IK1_Link I135_storage_room
+    with IK1_Link I137_storage_room
     with KD_Count 1
     with name 'kitchen' 'rooms//p' 
-    with list_together BC_173
-    with plural BC_174
-    with article BC_175
-;
-
-Object -> I130_oven ""
-    class K5_container
-    with short_name BC_176
-    with description BC_177
-    has open
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 4
-    with IK2_Link I131_pizza_pan
-    with IK5_Count 0
-    with IK5_Link I131_pizza_pan
-    with KD_Count 5
-    with name 'oven' 'containers//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with initial BC_178
-    with list_together BC_179
-    with plural BC_180
-    with article BC_181
-;
-
-Object -> I131_pizza_pan ""
-    class K5_container
-    with short_name BC_182
-    with description BC_183
-    has proper
-    has static
-    has open
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 5
-    with IK2_Link I138_chris
-    with IK5_Count 1
-    with IK5_Link I148_box
-    with KD_Count 5
-    with name 'pizza' 'pan' 'containers//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with initial BC_184
     with list_together BC_185
     with plural BC_186
     with article BC_187
 ;
 
-Object -> I138_chris ""
-    class K10_man
+Object -> I132_oven ""
+    class K5_container
     with short_name BC_188
     with description BC_189
-    has proper
+    has open
     with vector 0
     has mark_as_thing
-    with IK2_Count 9
-    with IK2_Link I133_margherita_pizza
-    with IK8_Count 4
-    with IK8_Link nothing
-    with IK10_Count 2
-    with IK10_Link nothing
-    with KD_Count 10
-    with name 'chris' 'men//p' 
+    with IK2_Count 6
+    with IK2_Link I133_pizza_pan
+    with IK5_Count 0
+    with IK5_Link I133_pizza_pan
+    with KD_Count 5
+    with name 'oven' 'containers//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_190
     with list_together BC_191
@@ -11209,123 +11203,132 @@ Object -> I138_chris ""
     with article BC_193
 ;
 
-Object I133_margherita_pizza ""
-    class K2_thing
+Object -> I133_pizza_pan ""
+    class K5_container
     with short_name BC_194
+    with description BC_195
     has proper
+    has static
+    has open
     with vector 0
     has mark_as_thing
     with IK2_Count 7
-    with IK2_Link I134_hawaiian_pizza
-    with KD_Count 2
-    with name 'margherita' 'pizza' 'things//p' 
+    with IK2_Link I140_chris
+    with IK5_Count 1
+    with IK5_Link I150_box
+    with KD_Count 5
+    with name 'pizza' 'pan' 'containers//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_195
     with initial BC_196
     with list_together BC_197
     with plural BC_198
     with article BC_199
 ;
 
-Object I134_hawaiian_pizza ""
-    class K2_thing
+Object -> I140_chris ""
+    class K10_man
     with short_name BC_200
+    with description BC_201
     has proper
     with vector 0
     has mark_as_thing
-    with IK2_Count 8
-    with IK2_Link I148_box
-    with KD_Count 2
-    with name 'hawaiian' 'pizza' 'things//p' 
+    with IK2_Count 11
+    with IK2_Link I135_margherita_pizza
+    with IK8_Count 4
+    with IK8_Link nothing
+    with IK10_Count 2
+    with IK10_Link nothing
+    with KD_Count 10
+    with name 'chris' 'men//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_201
     with initial BC_202
     with list_together BC_203
     with plural BC_204
     with article BC_205
 ;
 
-Object I135_storage_room ""
-    class K1_room
+Object I135_margherita_pizza ""
+    class K2_thing
     with short_name BC_206
+    has proper
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 9
+    with IK2_Link I136_hawaiian_pizza
+    with KD_Count 2
+    with name 'margherita' 'pizza' 'things//p' 
+    with action_bitmap 0 0 0 0 0 0 
     with description BC_207
+    with initial BC_208
+    with list_together BC_209
+    with plural BC_210
+    with article BC_211
+;
+
+Object I136_hawaiian_pizza ""
+    class K2_thing
+    with short_name BC_212
+    has proper
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 10
+    with IK2_Link I150_box
+    with KD_Count 2
+    with name 'hawaiian' 'pizza' 'things//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with description BC_213
+    with initial BC_214
+    with list_together BC_215
+    with plural BC_216
+    with article BC_217
+;
+
+Object I137_storage_room ""
+    class K1_room
+    with short_name BC_218
+    with description BC_219
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 2
-    with IK1_Link I136_freezer
+    with IK1_Link I138_freezer
     with KD_Count 1
     with name 'storage' 'room' 'rooms//p' 
-    with list_together BC_208
-    with plural BC_209
-    with article BC_210
+    with list_together BC_220
+    with plural BC_221
+    with article BC_222
 ;
 
-Object I136_freezer ""
+Object I138_freezer ""
     class K1_room
-    with short_name BC_211
-    with description BC_212
+    with short_name BC_223
+    with description BC_224
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 3
-    with IK1_Link I137_backroom
+    with IK1_Link I139_backroom
     with KD_Count 1
     with name 'freezer' 'rooms//p' 
-    with list_together BC_213
-    with plural BC_214
-    with article BC_215
-;
-
-Object -> I148_box ""
-    class K5_container
-    with short_name BC_216
-    with description BC_217
-    has ~open
-    has openable
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 15
-    with IK2_Link I132_cheese_pizza
-    with IK5_Count 3
-    with IK5_Link I141_cabinet
-    with KD_Count 5
-    with name 'box' 'containers//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with initial BC_218
-    with list_together BC_219
-    with plural BC_220
-    with article BC_221
-;
-
-Object -> -> I132_cheese_pizza ""
-    class K2_thing
-    with short_name BC_222
-    with description BC_223
-    has proper
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 6
-    with IK2_Link I147_dough
-    with KD_Count 2
-    with name 'cheese' 'pizza' 'things//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with initial BC_224
     with list_together BC_225
     with plural BC_226
     with article BC_227
 ;
 
-Object -> -> I147_dough ""
-    class K2_thing
+Object -> I150_box ""
+    class K5_container
     with short_name BC_228
     with description BC_229
+    has ~open
+    has openable
     with vector 0
     has mark_as_thing
-    with IK2_Count 14
-    with IK2_Link I149_shredded_cheese
-    with KD_Count 2
-    with name 'dough' 'things//p' 
+    with IK2_Count 17
+    with IK2_Link I134_cheese_pizza
+    with IK5_Count 3
+    with IK5_Link I143_cabinet
+    with KD_Count 5
+    with name 'box' 'containers//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_230
     with list_together BC_231
@@ -11333,33 +11336,34 @@ Object -> -> I147_dough ""
     with article BC_233
 ;
 
-Object -> -> I149_shredded_cheese ""
+Object -> -> I134_cheese_pizza ""
     class K2_thing
     with short_name BC_234
+    with description BC_235
+    has proper
     with vector 0
     has mark_as_thing
-    with IK2_Count 16
-    with IK2_Link I150_sauce
+    with IK2_Count 8
+    with IK2_Link I149_dough
     with KD_Count 2
-    with name 'shredded' 'cheese' 'things//p' 
+    with name 'cheese' 'pizza' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_235
     with initial BC_236
     with list_together BC_237
     with plural BC_238
     with article BC_239
 ;
 
-Object -> -> I150_sauce ""
+Object -> -> I149_dough ""
     class K2_thing
     with short_name BC_240
     with description BC_241
     with vector 0
     has mark_as_thing
-    with IK2_Count 17
-    with IK2_Link I151_pineapple
+    with IK2_Count 16
+    with IK2_Link I151_shredded_cheese
     with KD_Count 2
-    with name 'sauce' 'things//p' 
+    with name 'dough' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_242
     with list_together BC_243
@@ -11367,33 +11371,33 @@ Object -> -> I150_sauce ""
     with article BC_245
 ;
 
-Object -> -> I151_pineapple ""
+Object -> -> I151_shredded_cheese ""
     class K2_thing
     with short_name BC_246
-    with description BC_247
     with vector 0
     has mark_as_thing
     with IK2_Count 18
-    with IK2_Link I153_basil
+    with IK2_Link I152_sauce
     with KD_Count 2
-    with name 'pineapple' 'things//p' 
+    with name 'shredded' 'cheese' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
+    with description BC_247
     with initial BC_248
     with list_together BC_249
     with plural BC_250
     with article BC_251
 ;
 
-Object -> -> I153_basil ""
+Object -> -> I152_sauce ""
     class K2_thing
     with short_name BC_252
     with description BC_253
     with vector 0
     has mark_as_thing
-    with IK2_Count 20
-    with IK2_Link I154_ham
+    with IK2_Count 19
+    with IK2_Link I153_pineapple
     with KD_Count 2
-    with name 'basil' 'things//p' 
+    with name 'sauce' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_254
     with list_together BC_255
@@ -11401,16 +11405,16 @@ Object -> -> I153_basil ""
     with article BC_257
 ;
 
-Object -> -> I154_ham ""
+Object -> -> I153_pineapple ""
     class K2_thing
     with short_name BC_258
     with description BC_259
     with vector 0
     has mark_as_thing
-    with IK2_Count 21
-    with IK2_Link I141_cabinet
+    with IK2_Count 20
+    with IK2_Link I155_basil
     with KD_Count 2
-    with name 'ham' 'things//p' 
+    with name 'pineapple' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_260
     with list_together BC_261
@@ -11418,113 +11422,147 @@ Object -> -> I154_ham ""
     with article BC_263
 ;
 
-Object I137_backroom ""
-    class K1_room
+Object -> -> I155_basil ""
+    class K2_thing
     with short_name BC_264
     with description BC_265
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 22
+    with IK2_Link I156_ham
+    with KD_Count 2
+    with name 'basil' 'things//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with initial BC_266
+    with list_together BC_267
+    with plural BC_268
+    with article BC_269
+;
+
+Object -> -> I156_ham ""
+    class K2_thing
+    with short_name BC_270
+    with description BC_271
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 23
+    with IK2_Link I143_cabinet
+    with KD_Count 2
+    with name 'ham' 'things//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with initial BC_272
+    with list_together BC_273
+    with plural BC_274
+    with article BC_275
+;
+
+Object I139_backroom ""
+    class K1_room
+    with short_name BC_276
+    with description BC_277
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 4
-    with IK1_Link I139_bathroom
+    with IK1_Link I141_bathroom
     with KD_Count 1
     with name 'backroom' 'rooms//p' 
-    with list_together BC_266
-    with plural BC_267
-    with article BC_268
+    with list_together BC_278
+    with plural BC_279
+    with article BC_280
 ;
 
-Object I139_bathroom ""
+Object I141_bathroom ""
     class K1_room
-    with short_name BC_269
-    with description BC_270
+    with short_name BC_281
+    with description BC_282
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 5
-    with IK1_Link I140_staff_lounge
+    with IK1_Link I142_staff_lounge
     with KD_Count 1
     with name 'bathroom' 'rooms//p' 
-    with list_together BC_271
-    with plural BC_272
-    with article BC_273
+    with list_together BC_283
+    with plural BC_284
+    with article BC_285
 ;
 
-Object -> I141_cabinet ""
+Object -> I143_cabinet ""
     class K5_container
-    with short_name BC_274
-    with description BC_275
+    with short_name BC_286
+    with description BC_287
     has ~open
     has openable
     with vector 0
     has mark_as_thing
-    with IK2_Count 10
-    with IK2_Link I143_desk
+    with IK2_Count 12
+    with IK2_Link I145_desk
     with IK5_Count 2
     with IK5_Link nothing
     with KD_Count 5
     with name 'cabinet' 'containers//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with initial BC_276
-    with list_together BC_277
-    with plural BC_278
-    with article BC_279
+    with initial BC_288
+    with list_together BC_289
+    with plural BC_290
+    with article BC_291
 ;
 
-Object I140_staff_lounge ""
+Object I142_staff_lounge ""
     class K1_room
-    with short_name BC_280
-    with description BC_281
+    with short_name BC_292
+    with description BC_293
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 6
-    with IK1_Link I142_office
+    with IK1_Link I144_office
     with KD_Count 1
     with name 'staff' 'lounge' 'rooms//p' 
-    with list_together BC_282
-    with plural BC_283
-    with article BC_284
+    with list_together BC_294
+    with plural BC_295
+    with article BC_296
 ;
 
-Object I142_office ""
+Object I144_office ""
     class K1_room
-    with short_name BC_285
-    with description BC_286
+    with short_name BC_297
+    with description BC_298
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 7
-    with IK1_Link I144_back_alley
+    with IK1_Link I146_back_alley
     with KD_Count 1
     with name 'office' 'rooms//p' 
-    with list_together BC_287
-    with plural BC_288
-    with article BC_289
+    with list_together BC_299
+    with plural BC_300
+    with article BC_301
 ;
 
-Object -> I143_desk ""
+Object -> I145_desk ""
     class K2_thing
-    with short_name BC_290
-    with description BC_291
+    with short_name BC_302
+    with description BC_303
     has concealed
     with vector 0
     has mark_as_thing
-    with IK2_Count 11
-    with IK2_Link I145_dumpster
+    with IK2_Count 13
+    with IK2_Link I147_dumpster
     with KD_Count 2
     with name 'desk' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with initial BC_292
-    with list_together BC_293
-    with plural BC_294
-    with article BC_295
+    with initial BC_304
+    with list_together BC_305
+    with plural BC_306
+    with article BC_307
 ;
 
-Object I144_back_alley ""
+Object I146_back_alley ""
     class K1_room
-    with short_name BC_296
-    with description BC_297
+    with short_name BC_308
+    with description BC_309
     with vector 0
     with room_index -1
     has mark_as_room
@@ -11532,62 +11570,62 @@ Object I144_back_alley ""
     with IK1_Link nothing
     with KD_Count 1
     with name 'back' 'alley' 'rooms//p' 
-    with list_together BC_298
-    with plural BC_299
-    with article BC_300
-;
-
-Object -> I145_dumpster ""
-    class K2_thing
-    with short_name BC_301
-    with description BC_302
-    has concealed
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 12
-    with IK2_Link I146_trash_cans
-    with KD_Count 2
-    with name 'dumpster' 'things//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with initial BC_303
-    with list_together BC_304
-    with plural BC_305
-    with article BC_306
-;
-
-Object -> I146_trash_cans ""
-    class K2_thing
-    with short_name BC_307
-    with description BC_308
-    has concealed
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 13
-    with IK2_Link I152_pepperoni
-    with KD_Count 2
-    with name 'trash' 'cans' 'things//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with initial BC_309
     with list_together BC_310
     with plural BC_311
     with article BC_312
 ;
 
-Object I152_pepperoni ""
+Object -> I147_dumpster ""
     class K2_thing
     with short_name BC_313
     with description BC_314
+    has concealed
     with vector 0
     has mark_as_thing
-    with IK2_Count 19
-    with IK2_Link nothing
+    with IK2_Count 14
+    with IK2_Link I148_trash_cans
     with KD_Count 2
-    with name 'pepperoni' 'things//p' 
+    with name 'dumpster' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_315
     with list_together BC_316
     with plural BC_317
     with article BC_318
+;
+
+Object -> I148_trash_cans ""
+    class K2_thing
+    with short_name BC_319
+    with description BC_320
+    has concealed
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 15
+    with IK2_Link I154_pepperoni
+    with KD_Count 2
+    with name 'trash' 'cans' 'things//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with initial BC_321
+    with list_together BC_322
+    with plural BC_323
+    with article BC_324
+;
+
+Object I154_pepperoni ""
+    class K2_thing
+    with short_name BC_325
+    with description BC_326
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 21
+    with IK2_Link nothing
+    with KD_Count 2
+    with name 'pepperoni' 'things//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with initial BC_327
+    with list_together BC_328
+    with plural BC_329
+    with article BC_330
 ;
 
 Constant I71_english_language = 1;
@@ -11641,12 +11679,12 @@ Constant I123_masculine_gender = 2;
 Constant I124_feminine_gender = 3;
 Array Global_Vars -->
   (false) ! 7 darkness witnessed
-  (BC_319) ! 25 command prompt
+  (BC_331) ! 25 command prompt
   (I71_english_language) ! 29 language of play
-  (BC_320) ! 32 story author
-  (BC_321) ! 33 story headline
-  (BC_322) ! 34 story genre
-  (BC_323) ! 35 story description
+  (BC_332) ! 32 story author
+  (BC_333) ! 33 story headline
+  (BC_334) ! 34 story genre
+  (BC_335) ! 35 story description
   (1) ! 36 release number
   (0) ! 37 story creation year
   (0) ! 45 locale paragraph count
@@ -11661,20 +11699,20 @@ Array Global_Vars -->
 
 
 Array T0_final_question_options table  tab_0_0 tab_0_1 tab_0_2 tab_0_3 tab_0_4;
-Array tab_0_0 table $0664 0 (BC_324) (BC_325) (BC_326) (BC_327) (BC_328) ;
+Array tab_0_0 table $0664 0 (BC_336) (BC_337) (BC_338) (BC_339) (BC_340) ;
 Array tab_0_1 table $0465 1 (0) (0) (1) (0) (0) ;
 Array tab_0_2 table $2066 2 (Consult_Grammar_95) (Consult_Grammar_96) (Consult_Grammar_97) (Consult_Grammar_98) (Consult_Grammar_99) ;
 Array tab_0_3 table $0067 3 (IMMEDIATELY_RESTART_VM_R) (IMMEDIATELY_RESTORE_SAVED_R) ( TABLE_NOVALUE) (IMMEDIATELY_QUIT_R) (IMMEDIATELY_UNDO_R) ;
 Array tab_0_4 table $0068 4 ( TABLE_NOVALUE) ( TABLE_NOVALUE) (V27_amusing_a_victorious_pla) ( TABLE_NOVALUE) ( TABLE_NOVALUE) ;
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
-Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
-Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
 Array T2_recipes table  tab_2_0 tab_2_1;
-Array tab_2_0 table $066b 8 (BC_329) (BC_330) (BC_331) ;
-Array tab_2_1 table $086c NULL (I132_cheese_pizza) (I133_margherita_pizza) (I134_hawaiian_pizza) ;
+Array tab_2_0 table $066b 9 (BC_341) (BC_342) (BC_343) ;
+Array tab_2_1 table $086c NULL (I134_cheese_pizza) (I135_margherita_pizza) (I136_hawaiian_pizza) ;
 Array T3_chris_s_replies table  tab_3_0 tab_3_1;
-Array tab_3_0 table $2066 9 (Consult_Grammar_100) (Consult_Grammar_101) (Consult_Grammar_102) ;
-Array tab_3_1 table $066d 10 (BC_332) (BC_333) (BC_334) ;
+Array tab_3_0 table $2066 10 (Consult_Grammar_100) (Consult_Grammar_101) (Consult_Grammar_102) ;
+Array tab_3_1 table $066d 11 (BC_344) (BC_345) (BC_346) ;
 Array TB_Blanks -> 
   ! For table T0_final_question_options
   $00  ! Column 0
@@ -11684,7 +11722,7 @@ Array TB_Blanks ->
   $1b  ! Column 4
   
   ! For table T1_locale_priorities
-  $ff $ff $7f  ! Column 1
+  $ff $ff $ff $01  ! Column 1
   
   ! For table T2_recipes
   $00  ! Column 0
@@ -12494,11 +12532,11 @@ Array ActionHappened --> 0 0 0 0 0 0;
     {! [3: say ~You put the pizza in the oven and within minutes, you now have a Hawaiian Pizza freshly made and ready to be served. It smells so good!~]
         say__p=1;! [4: ~You put the pizza in the oven and within minutes, you now have a Hawaiian Pizza freshly made and ready to be served. It smells so good!~]
         ParaContent(); print "You put the pizza in the oven and within minutes, you now have a Hawaiian Pizza freshly made and ready to be served. It smells so good!"; new_line; .L_Say3; .L_SayX3;! [5: now the hawaiian pizza is baked]
-        (Adj_87_t2_v10(I134_hawaiian_pizza));
+        (Adj_87_t2_v10(I136_hawaiian_pizza));
         ! [6: now the description of the cheese pizza is ~Baked to perfection.~]
-        BlkValueCopy(GProperty(10, I132_cheese_pizza,description), TX_L_101);
+        BlkValueCopy(GProperty(10, I134_cheese_pizza,description), TX_L_105);
         ! [7: move hawaiian pizza to player]
-        MoveObject(I134_hawaiian_pizza, player, 0, false);
+        MoveObject(I136_hawaiian_pizza, player, 0, false);
         }
         rfalse;
 ];
@@ -12511,11 +12549,11 @@ Array ActionHappened --> 0 0 0 0 0 0;
     {! [3: say ~You put the pizza in the oven and in minutes, the Cheese Pizza is nicely cooked and is ready to be served!~]
         say__p=1;! [4: ~You put the pizza in the oven and in minutes, the Cheese Pizza is nicely cooked and is ready to be served!~]
         ParaContent(); print "You put the pizza in the oven and in minutes, the Cheese Pizza is nicely cooked and is ready to be served!"; new_line; .L_Say4; .L_SayX4;! [5: now the cheese pizza is baked]
-        (Adj_87_t2_v10(I132_cheese_pizza));
+        (Adj_87_t2_v10(I134_cheese_pizza));
         ! [6: now the description of the cheese pizza is ~Baked to perfection.~]
-        BlkValueCopy(GProperty(10, I132_cheese_pizza,description), TX_L_101);
+        BlkValueCopy(GProperty(10, I134_cheese_pizza,description), TX_L_105);
         ! [7: move cheese pizza to player]
-        MoveObject(I132_cheese_pizza, player, 0, false);
+        MoveObject(I134_cheese_pizza, player, 0, false);
         }
         rfalse;
 ];
@@ -12528,11 +12566,11 @@ Array ActionHappened --> 0 0 0 0 0 0;
     {! [3: say ~You put the pizza in the oven and in minutes, the Margherita Pizza has been perfectly cooked and looks delicious to serve.~]
         say__p=1;! [4: ~You put the pizza in the oven and in minutes, the Margherita Pizza has been perfectly cooked and looks delicious to serve.~]
         ParaContent(); print "You put the pizza in the oven and in minutes, the Margherita Pizza has been perfectly cooked and looks delicious to serve."; new_line; .L_Say5; .L_SayX5;! [5: now the margherita pizza is baked]
-        (Adj_87_t2_v10(I133_margherita_pizza));
+        (Adj_87_t2_v10(I135_margherita_pizza));
         ! [6: now the description of the margherita pizza is ~Baked to perfection.~]
-        BlkValueCopy(GProperty(10, I133_margherita_pizza,description), TX_L_101);
+        BlkValueCopy(GProperty(10, I135_margherita_pizza,description), TX_L_105);
         ! [7: move the margherita pizza to player]
-        MoveObject(I133_margherita_pizza, player, 0, false);
+        MoveObject(I135_margherita_pizza, player, 0, false);
         }
         rfalse;
 ];
@@ -12552,7 +12590,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
     ! [2: if player is in pizzeria]
     if (((I125_pizzeria == ContainerOf(player))))
     {! [3: if mike is not visible and emily is not visible and brad is not visible]
-        if ((((~~(((Adj_3_t1_v10(I126_mike))))))) && ((((~~(((Adj_3_t1_v10(I127_emily))))))) && (((~~(((Adj_3_t1_v10(I128_brad)))))))))
+        if ((((~~(((Adj_3_t1_v10(I128_mike))))))) && ((((~~(((Adj_3_t1_v10(I129_emily))))))) && (((~~(((Adj_3_t1_v10(I130_brad)))))))))
         {! [4: end the story finally saying ~You have successfully completed the orders for the customers! They all left with happily with their pizzas and you feel satisfied in becoming a pizza chef.[line break]Well done!~]
             deadflag=(TEXT_TY_ExpandIfPerishable(I7SFRAME,TX_S_134)); story_complete=true;
             }
@@ -13055,20 +13093,20 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of giving Cheese Pizza to Mike:
 [ R_801 ;
-    if ((((action ==##Give) &&  (actor==player) && ((noun == I132_cheese_pizza) && (true)) && ((second == I126_mike) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##Give) &&  (actor==player) && ((noun == I134_cheese_pizza) && (true)) && ((second == I128_mike) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_801, 801);
     ! [2: if the cheese pizza is raw]
-    if ((((Adj_86_t1_v10(I132_cheese_pizza)))))
+    if ((((Adj_86_t1_v10(I134_cheese_pizza)))))
     {! [3: say ~You need to bake it first~]
         say__p=1;! [4: ~You need to bake it first~]
         ParaContent(); print "You need to bake it first"; .L_Say7; .L_SayX7;} else {
-        ! [5: say ~Mike happly recieves and pays for the pizza while giving you a nice tip.~]
-        say__p=1;! [6: ~Mike happly recieves and pays for the pizza while giving you a nice tip.~]
-        ParaContent(); print "Mike happly recieves and pays for the pizza while giving you a nice tip."; new_line; .L_Say8; .L_SayX8;! [7: remove cheese pizza from play]
-        RemoveFromPlay(I132_cheese_pizza);
+        ! [5: say ~Mike happily receives and pays for the pizza while giving you a nice tip.~]
+        say__p=1;! [6: ~Mike happily receives and pays for the pizza while giving you a nice tip.~]
+        ParaContent(); print "Mike happily receives and pays for the pizza while giving you a nice tip."; new_line; .L_Say8; .L_SayX8;! [7: remove cheese pizza from play]
+        RemoveFromPlay(I134_cheese_pizza);
         ! [8: remove mike from play]
-        RemoveFromPlay(I126_mike);
+        RemoveFromPlay(I128_mike);
         }
         RulebookFails(); rtrue;
         } else if (debug_rules > 1) DB_Rule(R_801, 801, 'action');
@@ -13080,7 +13118,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
     ct_0 ! currently selected table
     ct_1 ! currently selected row
     ;
-    if ((((action ==##Ask) &&  (actor==player) && ((noun == I138_chris) && (true)) && (ct_1=ExistsTableRowCorr(ct_0=T3_chris_s_replies,102,parsed_number))))) { ! Runs only when pattern matches
+    if ((((action ==##Ask) &&  (actor==player) && ((noun == I140_chris) && (true)) && (ct_1=ExistsTableRowCorr(ct_0=T3_chris_s_replies,102,parsed_number))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_815, 815);
     ! [2: say ~[reply entry]~]
@@ -13092,7 +13130,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of talking to Mike:
 [ R_802 ;
-    if ((((action ==##A79_talking_to) &&  (actor==player) && ((noun == I126_mike) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##A79_talking_to) &&  (actor==player) && ((noun == I128_mike) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_802, 802);
     ! [2: say ~'Hello' you greet him.[one of]'Hi could I just get a Cheese Pizza?' he orders.[paragraph break]'No problem, I'll have it ready for you soon.' you respond.[stopping]~]
@@ -13120,7 +13158,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of talking to Emily:
 [ R_803 ;
-    if ((((action ==##A79_talking_to) &&  (actor==player) && ((noun == I127_emily) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##A79_talking_to) &&  (actor==player) && ((noun == I129_emily) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_803, 803);
     ! [2: say ~'Hi what could I get for you' you ask.[one of]'I'll have the Margherita pizza please' she says.[paragraph break]'Alright it will be ready soon.' you respond.[stopping]~]
@@ -13148,7 +13186,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of talking to Brad:
 [ R_804 ;
-    if ((((action ==##A79_talking_to) &&  (actor==player) && ((noun == I128_brad) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##A79_talking_to) &&  (actor==player) && ((noun == I130_brad) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_804, 804);
     ! [2: say ~Hello, I can take your order when you are ready.' you say.[one of]'Hey I'll just get the Hawaiian Pizza.' he says.[paragraph break]'Okay it'll be out soon.' you reply.[stopping]~]
@@ -13176,7 +13214,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of taking Oven:
 [ R_805 ;
-    if ((((action ==##Take) &&  (actor==player) && ((noun == I130_oven) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##Take) &&  (actor==player) && ((noun == I132_oven) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_805, 805);
     ! [2: say ~You can't move that, you're a cat.~]
@@ -13188,7 +13226,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of talking to Chris:
 [ R_814 ;
-    if ((((action ==##A79_talking_to) &&  (actor==player) && ((noun == I138_chris) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##A79_talking_to) &&  (actor==player) && ((noun == I140_chris) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_814, 814);
     ! [2: say ~[one of]'Hello,' greeting Chris. [paragraph break]'How are you?' he asks.[or]'I'm trying to make pizzas for my owner. Could you help me out?' you say.[paragraph break]'Yes I think I can help with that.' Chris replies. 'You need to be able to fill out the orders that are coming. Make the pizzas for the customers at the front'[or]'Okay thanks. What should I do first you ask.'[paragraph break]'Go find out what the customers want then come back to ask me about the recipe for the recipe for each pizza.'[or]You go off on your way.[stopping]~]
@@ -18867,7 +18905,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Report asking Chris about something:
 [ R_816 ;
-    if ((( (actor==player) && ((noun == I138_chris) && (true)) && (true)))) { ! Runs only when pattern matches
+    if ((( (actor==player) && ((noun == I140_chris) && (true)) && (true)))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_816, 816);
     ! [2: say ~Chris has nothing to say about [the topic understood].~]
@@ -20156,7 +20194,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
         say__p=1;! [4: ~You can't combine ~]
         ParaContent(); print "You can't combine ";! [5: list of things in pizza pan]
         ParaContent(); objectloop(tmp_0 ofclass Object)
-        			if (((tmp_0 ofclass K2_thing) && (I131_pizza_pan == ContainerOf(tmp_0))))
+        			if (((tmp_0 ofclass K2_thing) && (I133_pizza_pan == ContainerOf(tmp_0))))
         				give tmp_0 workflag2;
         			else
         				give tmp_0 ~workflag2;
@@ -20188,25 +20226,25 @@ Array ActionHappened --> 0 0 0 0 0 0;
     say__p=1;! [3: ~You combine ~]
     ParaContent(); print "You combine ";! [4: list of things in pizza pan]
     ParaContent(); objectloop(tmp_0 ofclass Object)
-    			if (((tmp_0 ofclass K2_thing) && (I131_pizza_pan == ContainerOf(tmp_0))))
+    			if (((tmp_0 ofclass K2_thing) && (I133_pizza_pan == ContainerOf(tmp_0))))
     				give tmp_0 workflag2;
     			else
     				give tmp_0 ~workflag2;
     		WriteListOfMarkedObjects(ENGLISH_BIT+NOARTICLE_BIT);! [5: ~.~]
     ParaContent(); print "."; new_line; .L_Say307; .L_SayX307;! [6: if dough is in pizza pan]
-    if (((I131_pizza_pan == ContainerOf(I147_dough))))
+    if (((I133_pizza_pan == ContainerOf(I149_dough))))
     {! [7: move dough to player]
-        MoveObject(I147_dough, player, 0, false);
+        MoveObject(I149_dough, player, 0, false);
         }
     ! [8: if sauce is in pizza pan]
-    if (((I131_pizza_pan == ContainerOf(I150_sauce))))
+    if (((I133_pizza_pan == ContainerOf(I152_sauce))))
     {! [9: move sauce to player]
-        MoveObject(I150_sauce, player, 0, false);
+        MoveObject(I152_sauce, player, 0, false);
         }
     ! [10: if shredded cheese is in pizza pan]
-    if (((I131_pizza_pan == ContainerOf(I149_shredded_cheese))))
+    if (((I133_pizza_pan == ContainerOf(I151_shredded_cheese))))
     {! [11: move shredded cheese to player]
-        MoveObject(I149_shredded_cheese, player, 0, false);
+        MoveObject(I151_shredded_cheese, player, 0, false);
         }
     ! [12: repeat with item running through things in pizza pan]
     for (tmp_0=Prop_35(0), tmp_1=Prop_35(tmp_0): tmp_0: tmp_0=tmp_1, tmp_1=Prop_35(tmp_1))
@@ -20214,7 +20252,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
         RemoveFromPlay(tmp_0);
         }
     ! [14: move the substance to the pizza pan]
-    MoveObject((MStack-->MstVO(20077,0)), I131_pizza_pan, 0, false);
+    MoveObject((MStack-->MstVO(20077,0)), I133_pizza_pan, 0, false);
     } else if (debug_rules > 1) DB_Rule(R_808, 808, 'actor');
     rfalse;
 ];
@@ -29267,7 +29305,7 @@ Array FWMatrix --> NUM_ROOMS*NUM_ROOMS;
 ! Relations.i6t: Relation Route-Finding
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant MAX_ROUTE_LENGTH = 43 + 32;
+Constant MAX_ROUTE_LENGTH = 45 + 32;
 
 [ RelationRouteTo relation from to count  handler;
 	if (count) {
@@ -37730,12 +37768,12 @@ Verb meta 'tree'
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
 
-Array LIST_CONST_15456 --> (85721088) LIST_OF_TY MAX_POSITIVE_NUMBER 10 3 (I147_dough) (I150_sauce) (I149_shredded_cheese) ;
-Array LIST_CONST_15466 --> (102498304) LIST_OF_TY MAX_POSITIVE_NUMBER 10 4 (I147_dough) (I150_sauce) (I149_shredded_cheese) (I153_basil) ;
-Array LIST_CONST_15478 --> (102498304) LIST_OF_TY MAX_POSITIVE_NUMBER 10 5 (I147_dough) (I150_sauce) (I149_shredded_cheese) (I151_pineapple) (I154_ham) ;
-Array LIST_CONST_15458 --> (85721088) LIST_OF_TY MAX_POSITIVE_NUMBER 10 3 (I147_dough) (I150_sauce) (I149_shredded_cheese) ;
-Array LIST_CONST_15468 --> (102498304) LIST_OF_TY MAX_POSITIVE_NUMBER 10 4 (I147_dough) (I150_sauce) (I149_shredded_cheese) (I153_basil) ;
-Array LIST_CONST_15480 --> (102498304) LIST_OF_TY MAX_POSITIVE_NUMBER 10 5 (I147_dough) (I150_sauce) (I149_shredded_cheese) (I151_pineapple) (I154_ham) ;
+Array LIST_CONST_15490 --> (85721088) LIST_OF_TY MAX_POSITIVE_NUMBER 10 3 (I149_dough) (I152_sauce) (I151_shredded_cheese) ;
+Array LIST_CONST_15500 --> (102498304) LIST_OF_TY MAX_POSITIVE_NUMBER 10 4 (I149_dough) (I152_sauce) (I151_shredded_cheese) (I155_basil) ;
+Array LIST_CONST_15512 --> (102498304) LIST_OF_TY MAX_POSITIVE_NUMBER 10 5 (I149_dough) (I152_sauce) (I151_shredded_cheese) (I153_pineapple) (I156_ham) ;
+Array LIST_CONST_15492 --> (85721088) LIST_OF_TY MAX_POSITIVE_NUMBER 10 3 (I149_dough) (I152_sauce) (I151_shredded_cheese) ;
+Array LIST_CONST_15502 --> (102498304) LIST_OF_TY MAX_POSITIVE_NUMBER 10 4 (I149_dough) (I152_sauce) (I151_shredded_cheese) (I155_basil) ;
+Array LIST_CONST_15514 --> (102498304) LIST_OF_TY MAX_POSITIVE_NUMBER 10 5 (I149_dough) (I152_sauce) (I151_shredded_cheese) (I153_pineapple) (I156_ham) ;
 
 
 
@@ -41508,7 +41546,7 @@ Array TX_S_134 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_134;
         jump NextOuterLoop_4;
     }
     if (x) jump NextOuterLoop_4;
-    for (x=TestContainmentRange(I131_pizza_pan): x: x=TestContainmentRange(I131_pizza_pan,x)){
+    for (x=TestContainmentRange(I133_pizza_pan): x: x=TestContainmentRange(I133_pizza_pan,x)){
         if ((x ofclass K2_thing)){
             return x;
         }
@@ -42173,7 +42211,7 @@ Array TX_S_134 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_134;
         jump NextOuterLoop_4;
     }
     if (x) jump NextOuterLoop_4;
-    for (x=TestContainmentRange(I131_pizza_pan): x: x=TestContainmentRange(I131_pizza_pan,x)){
+    for (x=TestContainmentRange(I133_pizza_pan): x: x=TestContainmentRange(I133_pizza_pan,x)){
         if ((x ofclass K2_thing)){
             return x;
         }
@@ -48856,9 +48894,9 @@ Constant NO_PAST_TENSE_ACTIONS 0;
         trips = ((present_chronological_record-->pt) & $$11111110)/2;
         consecutives = ((present_chronological_record-->pt) & $$111111100000000)/256;
         switch(pt) {
-            0: new = (((I130_oven == ContainerOf(I134_hawaiian_pizza))));
-            1: new = (((I130_oven == ContainerOf(I132_cheese_pizza))));
-            2: new = (((I130_oven == ContainerOf(I133_margherita_pizza))));
+            0: new = (((I132_oven == ContainerOf(I136_hawaiian_pizza))));
+            1: new = (((I132_oven == ContainerOf(I134_cheese_pizza))));
+            2: new = (((I132_oven == ContainerOf(I135_margherita_pizza))));
             default: print "*** No such past tense condition ***^"; new = false;
         }
         if (new) {
@@ -50229,85 +50267,89 @@ Verb 'talk'
 
 
 
-Constant TX_PS_91 = ">";
-Constant TX_PS_74 = "A Bathroom for both customers and employees. Often cleaned and kept in good condition. There is cabinet next to the sink.";
-Constant TX_PS_57 = "A big box used to hold important ingredients.";
+Constant TX_PS_95 = ">";
+Constant TX_PS_78 = "A Bathroom for both customers and employees. Often cleaned and kept in good condition. There is cabinet next to the sink.";
+Constant TX_PS_61 = "A big box used to hold important ingredients.";
 Constant TX_PS_32 = "A calico cat that is a little chubby from eating pizza scraps. You have the ability to speak to humans.";
-Constant TX_PS_78 = "A clean room away from the hustle and bustle of the kitchen. A place for the cooks to relax and eat. Has a couch and a few tables and chairs. To the south is the Office.";
-Constant TX_PS_55 = "A huge freezer, extremely cold inside. Boxes that hold frozen foods and ingrediants. Not that much is held inside and makes the freezer seem larger than it really is.";
-Constant TX_PS_37 = "A hungery customer that looks eager to order his pizza.";
-Constant TX_PS_41 = "A man that is drooling slightly while staring at the menu.";
-Constant TX_PS_86 = "A rollable dumbster that seems filled to the top and should be emptied soon.";
-Constant TX_PS_76 = "A small wooden cabinet with a handle on the side to open it.";
-Constant TX_PS_39 = "A woman on her phone taking the order for the rest of her friends.";
+Constant TX_PS_82 = "A clean room away from the hustle and bustle of the kitchen. A place for the cooks to relax and eat. Has a couch and a few tables and chairs. To the south is the Office.";
+Constant TX_PS_59 = "A huge freezer, extremely cold inside. Boxes that hold frozen foods and ingredients. Not that much is held inside and makes the freezer seem larger than it really is.";
+Constant TX_PS_41 = "A hungry customer that looks eager to order his pizza.";
+Constant TX_PS_45 = "A man that is drooling slightly while staring at the menu.";
+Constant TX_PS_90 = "A rollable dumpster that seems filled to the top and should be emptied soon.";
+Constant TX_PS_80 = "A small wooden cabinet with a handle on the side to open it.";
+Constant TX_PS_43 = "A woman on her phone taking the order for the rest of her friends.";
 Constant TX_PS_3 = "An Interactive Fiction";
-Constant TX_PS_82 = "An old maple desk that has a polished top. Your owner really takes care of it.";
-Constant TX_PS_84 = "At the very back of the whole Pizzeria, it connects to an alley in back. There is a dumpster and trash cans. There is a distinct smell the resonates in the air.";
-Constant TX_PS_83 = "Back Alley";
-Constant TX_PS_71 = "Backroom";
-Constant TX_PS_101 = "Baked to perfection.";
-Array TX_L_101 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_101;
-Constant TX_PS_67 = "Basil";
-Constant TX_PS_99 = "Basil, Cheese, Sauce, and Dough";
-Constant TX_PS_73 = "Bathroom";
-Constant TX_PS_56 = "Box";
-Constant TX_PS_40 = "Brad";
-Constant TX_PS_75 = "Cabinet";
-Constant TX_PS_58 = "Cheese Pizza";
-Constant TX_PS_98 = "Cheese, Sauce, and Dough";
-Constant TX_PS_49 = "Chris is an assistant cook. He looks like he could be useful.";
-Constant TX_PS_48 = "Chris";
-Constant TX_PS_53 = "Dark and musky. Used to hold things like utensils and pizza boxes. Boxes stacked as high as the ceiling. Organized but cluttered in some parts.";
-Constant TX_PS_60 = "Dough";
-Constant TX_PS_38 = "Emily";
-Constant TX_PS_92 = "Fiction";
-Constant TX_PS_54 = "Freezer";
-Constant TX_PS_69 = "Ham";
-Constant TX_PS_51 = "Hawaiian Pizza";
-Constant TX_PS_64 = "Homemade tomato sauce cooked by the owner each day. There is left over from yesterday enough to use today.";
-Constant TX_PS_42 = "Kitchen";
-Constant TX_PS_66 = "Large pineapples from Hawaii.";
-Constant TX_PS_68 = "Locally grown and freshly picked basil. Nice green color and strong flavorful scent.";
-Constant TX_PS_50 = "Margherita Pizza";
-Constant TX_PS_36 = "Mike";
-Constant TX_PS_59 = "Mozzarella cheese as a topping for all pizzas.";
-Constant TX_PS_79 = "Office";
-Constant TX_PS_44 = "Oven";
-Constant TX_PS_89 = "Pepperoni";
+Constant TX_PS_86 = "An old maple desk that has a polished top. Your owner really takes care of it.";
+Constant TX_PS_88 = "At the very back of the whole Pizzeria, it connects to an alley in back. There is a dumpster and trash cans. The atmosphere is dirty there is rubbish scattered around.";
+Constant TX_PS_87 = "Back Alley";
+Constant TX_PS_75 = "Backroom";
+Constant TX_PS_105 = "Baked to perfection.";
+Array TX_L_105 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_105;
+Constant TX_PS_71 = "Basil";
+Constant TX_PS_103 = "Basil, Cheese, Sauce, and Dough";
+Constant TX_PS_77 = "Bathroom";
+Constant TX_PS_60 = "Box";
+Constant TX_PS_44 = "Brad";
+Constant TX_PS_79 = "Cabinet";
+Constant TX_PS_38 = "Chairs";
+Constant TX_PS_62 = "Cheese Pizza";
+Constant TX_PS_102 = "Cheese, Sauce, and Dough";
+Constant TX_PS_53 = "Chris is an assistant cook. He looks like he could be useful.";
+Constant TX_PS_52 = "Chris";
+Constant TX_PS_37 = "Cleaned and polished wood grain tables.";
+Constant TX_PS_57 = "Dark and musky. Used to hold things like utensils and pizza boxes. Boxes stacked as high as the ceiling. Organized but cluttered in some parts.";
+Constant TX_PS_64 = "Dough";
+Constant TX_PS_42 = "Emily";
+Constant TX_PS_96 = "Fiction";
+Constant TX_PS_58 = "Freezer";
+Constant TX_PS_73 = "Ham";
+Constant TX_PS_55 = "Hawaiian Pizza";
+Constant TX_PS_68 = "Homemade tomato sauce cooked by the owner each day. There is left over from yesterday enough to use today.";
+Constant TX_PS_46 = "Kitchen";
+Constant TX_PS_70 = "Large pineapples from Hawaii.";
+Constant TX_PS_72 = "Locally grown and freshly picked basil. Nice green color and strong flavorful scent.";
+Constant TX_PS_54 = "Margherita Pizza";
+Constant TX_PS_40 = "Mike";
+Constant TX_PS_63 = "Mozzarella cheese as a topping for all pizzas.";
+Constant TX_PS_83 = "Office";
+Constant TX_PS_48 = "Oven";
+Constant TX_PS_93 = "Pepperoni";
 Constant TX_PS_2 = "Pepperoni's Pizza";
-Constant TX_PS_65 = "Pineapple";
-Constant TX_PS_100 = "Pineapple, Ham, Cheese, Sauce, and Dough";
-Constant TX_PS_46 = "Pizza Pan";
+Constant TX_PS_69 = "Pineapple";
+Constant TX_PS_104 = "Pineapple, Ham, Cheese, Sauce, and Dough";
+Constant TX_PS_50 = "Pizza Pan";
 Constant TX_PS_34 = "Pizzeria";
-Constant TX_PS_45 = "Professional grade oven used to fire pizzas to perfection.";
-Constant TX_PS_70 = "Purchased daily from the local deli store. Ham fresh off the bone.";
-Constant TX_PS_47 = "Put ingredients in here and then COMBINE to make a pizza. Then take raw pizza out of pan and bake in oven. Do you know the recipe?";
-Constant TX_PS_96 = "QUIT";
-Constant TX_PS_93 = "RESTART";
-Constant TX_PS_94 = "RESTORE a saved game";
-Constant TX_PS_63 = "Sauce";
+Constant TX_PS_49 = "Professional grade oven used to fire pizzas to perfection.";
+Constant TX_PS_74 = "Purchased daily from the local deli store. Ham fresh off the bone.";
+Constant TX_PS_51 = "Put ingredients in here and then COMBINE to make a pizza. Then take raw pizza out of pan and bake in oven. Do you know the recipe?";
+Constant TX_PS_100 = "QUIT";
+Constant TX_PS_97 = "RESTART";
+Constant TX_PS_98 = "RESTORE a saved game";
+Constant TX_PS_67 = "Sauce";
 Constant TX_PS_4 = "Shane Toma";
-Constant TX_PS_62 = "Shredded Cheese";
-Constant TX_PS_77 = "Staff Lounge";
-Constant TX_PS_52 = "Storage Room";
-Constant TX_PS_72 = "The Backroom was created as a secondary are to cook. There are ovens and pots used for food prep. Cleaner and less cluttered than the kitchen. The Staff Lounge is to the South. To the east is the Freezer.";
-Constant TX_PS_43 = "The Kitchen is where all the pizza is baked and created. The church of pizza. It's a little messy and seems to be hectic when busy. To the South is the Backroom. The Storage room is to the east and to the west is the Bathroom.";
-Constant TX_PS_61 = "The basis of all pizza. Made from flour and yeast. Kneaded to perfection.";
+Constant TX_PS_66 = "Shredded Cheese";
+Constant TX_PS_81 = "Staff Lounge";
+Constant TX_PS_56 = "Storage Room";
+Constant TX_PS_36 = "Tables";
+Constant TX_PS_76 = "The Backroom was created as a secondary are to cook. There are ovens and pots used for food prep. Cleaner and less cluttered than the kitchen. The Staff Lounge is to the South. To the east is the Freezer.";
+Constant TX_PS_47 = "The Kitchen is where all the pizza is baked and created. The church of pizza. It's a little messy and seems to be hectic when busy. To the South is the Backroom. The Storage room is to the east and to the west is the Bathroom.";
+Constant TX_PS_65 = "The basis of all pizza. Made from flour and yeast. Kneaded to perfection.";
 Constant TX_PS_35 = "The front of the restaurant where the customers are served and where the pizza is brought out. Clean but a bit cramped with some tables and chairs. You see three customers waiting to get their orders. To the south is the kitchen.";
-Constant TX_PS_90 = "The staple pizza topping. Large bunches already cut into slices.";
-Constant TX_PS_88 = "Two metal trash cans used for throwing out smaller trash. Inside is mostly pizza scraps and boxes.";
-Constant TX_PS_97 = "UNDO the last command";
-Constant TX_PS_80 = "Where your owner does his business and works. The office has a desk and safe. To the south is the Back Alley. The key to the safe is missing. I wonder where it is...";
+Constant TX_PS_94 = "The staple pizza topping. Large bunches already cut into slices.";
+Constant TX_PS_92 = "Two metal trash cans used for throwing out smaller trash. Inside is mostly pizza scraps and boxes.";
+Constant TX_PS_101 = "UNDO the last command";
+Constant TX_PS_84 = "Where your owner does his business and works. The office has a desk and safe. To the south is the Back Alley. The key to the safe is missing. I wonder where it is...";
+Constant TX_PS_39 = "Wooden seats with a comfy cushion.";
 Constant TX_PS_33 = "Yourself";
 Constant TX_PS_9 = "animals";
 Constant TX_PS_14 = "backdrops";
 Constant TX_PS_11 = "containers";
-Constant TX_PS_81 = "desk";
+Constant TX_PS_85 = "desk";
 Constant TX_PS_15 = "devices";
 Constant TX_PS_17 = "directions";
 Constant TX_PS_10 = "doors";
 Constant TX_PS_28 = "down";
-Constant TX_PS_85 = "dumpster";
+Constant TX_PS_89 = "dumpster";
 Constant TX_PS_25 = "east";
 Constant TX_PS_29 = "inside";
 Constant TX_PS_7 = "men";
@@ -50318,13 +50360,13 @@ Constant TX_PS_30 = "outside";
 Constant TX_PS_6 = "people";
 Constant TX_PS_13 = "player's holdalls";
 Constant TX_PS_16 = "regions";
-Constant TX_PS_95 = "see some suggestions for AMUSING things to do";
+Constant TX_PS_99 = "see some suggestions for AMUSING things to do";
 Constant TX_PS_22 = "south";
 Constant TX_PS_23 = "southeast";
 Constant TX_PS_24 = "southwest";
 Constant TX_PS_5 = "supporters";
 Constant TX_PS_19 = "the";
-Constant TX_PS_87 = "trash cans";
+Constant TX_PS_91 = "trash cans";
 Constant TX_PS_27 = "up";
 Constant TX_PS_12 = "vehicles";
 Constant TX_PS_26 = "west";
@@ -57645,13 +57687,13 @@ Array BC_153 --> PACKED_TEXT_STORAGE TX_PS_36;
 Array BC_154 --> PACKED_TEXT_STORAGE TX_PS_37;
 Array BC_155 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_156 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_157 --> PACKED_TEXT_STORAGE TX_PS_7;
+Array BC_157 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_158 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_159 --> PACKED_TEXT_STORAGE TX_PS_38;
 Array BC_160 --> PACKED_TEXT_STORAGE TX_PS_39;
 Array BC_161 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_162 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_163 --> PACKED_TEXT_STORAGE TX_PS_8;
+Array BC_163 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_164 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_165 --> PACKED_TEXT_STORAGE TX_PS_40;
 Array BC_166 --> PACKED_TEXT_STORAGE TX_PS_41;
@@ -57663,56 +57705,56 @@ Array BC_171 --> PACKED_TEXT_STORAGE TX_PS_42;
 Array BC_172 --> PACKED_TEXT_STORAGE TX_PS_43;
 Array BC_173 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_174 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_175 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_176 --> PACKED_TEXT_STORAGE TX_PS_44;
-Array BC_177 --> PACKED_TEXT_STORAGE TX_PS_45;
-Array BC_178 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_175 --> PACKED_TEXT_STORAGE TX_PS_8;
+Array BC_176 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_177 --> PACKED_TEXT_STORAGE TX_PS_44;
+Array BC_178 --> PACKED_TEXT_STORAGE TX_PS_45;
 Array BC_179 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_180 --> PACKED_TEXT_STORAGE TX_PS_11;
-Array BC_181 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_182 --> PACKED_TEXT_STORAGE TX_PS_46;
-Array BC_183 --> PACKED_TEXT_STORAGE TX_PS_47;
-Array BC_184 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_180 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_181 --> PACKED_TEXT_STORAGE TX_PS_7;
+Array BC_182 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_183 --> PACKED_TEXT_STORAGE TX_PS_46;
+Array BC_184 --> PACKED_TEXT_STORAGE TX_PS_47;
 Array BC_185 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_186 --> PACKED_TEXT_STORAGE TX_PS_11;
+Array BC_186 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_187 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_188 --> PACKED_TEXT_STORAGE TX_PS_48;
 Array BC_189 --> PACKED_TEXT_STORAGE TX_PS_49;
 Array BC_190 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_191 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_192 --> PACKED_TEXT_STORAGE TX_PS_7;
+Array BC_192 --> PACKED_TEXT_STORAGE TX_PS_11;
 Array BC_193 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_194 --> PACKED_TEXT_STORAGE TX_PS_50;
-Array BC_195 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_195 --> PACKED_TEXT_STORAGE TX_PS_51;
 Array BC_196 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_197 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_198 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_198 --> PACKED_TEXT_STORAGE TX_PS_11;
 Array BC_199 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_200 --> PACKED_TEXT_STORAGE TX_PS_51;
-Array BC_201 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_200 --> PACKED_TEXT_STORAGE TX_PS_52;
+Array BC_201 --> PACKED_TEXT_STORAGE TX_PS_53;
 Array BC_202 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_203 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_204 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_204 --> PACKED_TEXT_STORAGE TX_PS_7;
 Array BC_205 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_206 --> PACKED_TEXT_STORAGE TX_PS_52;
-Array BC_207 --> PACKED_TEXT_STORAGE TX_PS_53;
+Array BC_206 --> PACKED_TEXT_STORAGE TX_PS_54;
+Array BC_207 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_208 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_209 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_210 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_211 --> PACKED_TEXT_STORAGE TX_PS_54;
+Array BC_211 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_212 --> PACKED_TEXT_STORAGE TX_PS_55;
 Array BC_213 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_214 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_215 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_216 --> PACKED_TEXT_STORAGE TX_PS_56;
-Array BC_217 --> PACKED_TEXT_STORAGE TX_PS_57;
-Array BC_218 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_219 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_220 --> PACKED_TEXT_STORAGE TX_PS_11;
+Array BC_216 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_217 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_218 --> PACKED_TEXT_STORAGE TX_PS_56;
+Array BC_219 --> PACKED_TEXT_STORAGE TX_PS_57;
+Array BC_220 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_221 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_222 --> PACKED_TEXT_STORAGE TX_PS_58;
-Array BC_223 --> PACKED_TEXT_STORAGE TX_PS_59;
-Array BC_224 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_222 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_223 --> PACKED_TEXT_STORAGE TX_PS_58;
+Array BC_224 --> PACKED_TEXT_STORAGE TX_PS_59;
 Array BC_225 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_226 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_227 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
@@ -57720,22 +57762,22 @@ Array BC_228 --> PACKED_TEXT_STORAGE TX_PS_60;
 Array BC_229 --> PACKED_TEXT_STORAGE TX_PS_61;
 Array BC_230 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_231 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_232 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_232 --> PACKED_TEXT_STORAGE TX_PS_11;
 Array BC_233 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_234 --> PACKED_TEXT_STORAGE TX_PS_62;
-Array BC_235 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_235 --> PACKED_TEXT_STORAGE TX_PS_63;
 Array BC_236 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_237 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_238 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_239 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_240 --> PACKED_TEXT_STORAGE TX_PS_63;
-Array BC_241 --> PACKED_TEXT_STORAGE TX_PS_64;
+Array BC_240 --> PACKED_TEXT_STORAGE TX_PS_64;
+Array BC_241 --> PACKED_TEXT_STORAGE TX_PS_65;
 Array BC_242 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_243 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_244 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_245 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_246 --> PACKED_TEXT_STORAGE TX_PS_65;
-Array BC_247 --> PACKED_TEXT_STORAGE TX_PS_66;
+Array BC_246 --> PACKED_TEXT_STORAGE TX_PS_66;
+Array BC_247 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_248 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_249 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_250 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
@@ -57757,47 +57799,47 @@ Array BC_265 --> PACKED_TEXT_STORAGE TX_PS_72;
 Array BC_266 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_267 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_268 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_269 --> PACKED_TEXT_STORAGE TX_PS_73;
-Array BC_270 --> PACKED_TEXT_STORAGE TX_PS_74;
-Array BC_271 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_269 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_270 --> PACKED_TEXT_STORAGE TX_PS_73;
+Array BC_271 --> PACKED_TEXT_STORAGE TX_PS_74;
 Array BC_272 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_273 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_274 --> PACKED_TEXT_STORAGE TX_PS_75;
-Array BC_275 --> PACKED_TEXT_STORAGE TX_PS_76;
-Array BC_276 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_277 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_278 --> PACKED_TEXT_STORAGE TX_PS_11;
+Array BC_274 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_275 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_276 --> PACKED_TEXT_STORAGE TX_PS_75;
+Array BC_277 --> PACKED_TEXT_STORAGE TX_PS_76;
+Array BC_278 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_279 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_280 --> PACKED_TEXT_STORAGE TX_PS_77;
-Array BC_281 --> PACKED_TEXT_STORAGE TX_PS_78;
-Array BC_282 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_280 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_281 --> PACKED_TEXT_STORAGE TX_PS_77;
+Array BC_282 --> PACKED_TEXT_STORAGE TX_PS_78;
 Array BC_283 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_284 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_285 --> PACKED_TEXT_STORAGE TX_PS_79;
-Array BC_286 --> PACKED_TEXT_STORAGE TX_PS_80;
-Array BC_287 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_285 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_286 --> PACKED_TEXT_STORAGE TX_PS_79;
+Array BC_287 --> PACKED_TEXT_STORAGE TX_PS_80;
 Array BC_288 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_289 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_290 --> PACKED_TEXT_STORAGE TX_PS_81;
-Array BC_291 --> PACKED_TEXT_STORAGE TX_PS_82;
-Array BC_292 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_293 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_290 --> PACKED_TEXT_STORAGE TX_PS_11;
+Array BC_291 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_292 --> PACKED_TEXT_STORAGE TX_PS_81;
+Array BC_293 --> PACKED_TEXT_STORAGE TX_PS_82;
 Array BC_294 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_295 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_296 --> PACKED_TEXT_STORAGE TX_PS_83;
-Array BC_297 --> PACKED_TEXT_STORAGE TX_PS_84;
-Array BC_298 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_296 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_297 --> PACKED_TEXT_STORAGE TX_PS_83;
+Array BC_298 --> PACKED_TEXT_STORAGE TX_PS_84;
 Array BC_299 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_300 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_301 --> PACKED_TEXT_STORAGE TX_PS_85;
-Array BC_302 --> PACKED_TEXT_STORAGE TX_PS_86;
-Array BC_303 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_301 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_302 --> PACKED_TEXT_STORAGE TX_PS_85;
+Array BC_303 --> PACKED_TEXT_STORAGE TX_PS_86;
 Array BC_304 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_305 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_306 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_307 --> PACKED_TEXT_STORAGE TX_PS_87;
-Array BC_308 --> PACKED_TEXT_STORAGE TX_PS_88;
-Array BC_309 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_307 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_308 --> PACKED_TEXT_STORAGE TX_PS_87;
+Array BC_309 --> PACKED_TEXT_STORAGE TX_PS_88;
 Array BC_310 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_311 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_312 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
@@ -57808,21 +57850,33 @@ Array BC_316 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_317 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_318 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_319 --> PACKED_TEXT_STORAGE TX_PS_91;
-Array BC_320 --> PACKED_TEXT_STORAGE TX_PS_4;
-Array BC_321 --> PACKED_TEXT_STORAGE TX_PS_3;
-Array BC_322 --> PACKED_TEXT_STORAGE TX_PS_92;
+Array BC_320 --> PACKED_TEXT_STORAGE TX_PS_92;
+Array BC_321 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_322 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_323 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_324 --> PACKED_TEXT_STORAGE TX_PS_93;
-Array BC_325 --> PACKED_TEXT_STORAGE TX_PS_94;
-Array BC_326 --> PACKED_TEXT_STORAGE TX_PS_95;
-Array BC_327 --> PACKED_TEXT_STORAGE TX_PS_96;
-Array BC_328 --> PACKED_TEXT_STORAGE TX_PS_97;
-Array BC_329 --> LIST_CONST_15456 0;
-Array BC_330 --> LIST_CONST_15466 0;
-Array BC_331 --> LIST_CONST_15478 0;
-Array BC_332 --> PACKED_TEXT_STORAGE TX_PS_98;
-Array BC_333 --> PACKED_TEXT_STORAGE TX_PS_99;
-Array BC_334 --> PACKED_TEXT_STORAGE TX_PS_100;
+Array BC_324 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_325 --> PACKED_TEXT_STORAGE TX_PS_93;
+Array BC_326 --> PACKED_TEXT_STORAGE TX_PS_94;
+Array BC_327 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_328 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_329 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_330 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_331 --> PACKED_TEXT_STORAGE TX_PS_95;
+Array BC_332 --> PACKED_TEXT_STORAGE TX_PS_4;
+Array BC_333 --> PACKED_TEXT_STORAGE TX_PS_3;
+Array BC_334 --> PACKED_TEXT_STORAGE TX_PS_96;
+Array BC_335 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_336 --> PACKED_TEXT_STORAGE TX_PS_97;
+Array BC_337 --> PACKED_TEXT_STORAGE TX_PS_98;
+Array BC_338 --> PACKED_TEXT_STORAGE TX_PS_99;
+Array BC_339 --> PACKED_TEXT_STORAGE TX_PS_100;
+Array BC_340 --> PACKED_TEXT_STORAGE TX_PS_101;
+Array BC_341 --> LIST_CONST_15490 0;
+Array BC_342 --> LIST_CONST_15500 0;
+Array BC_343 --> LIST_CONST_15512 0;
+Array BC_344 --> PACKED_TEXT_STORAGE TX_PS_102;
+Array BC_345 --> PACKED_TEXT_STORAGE TX_PS_103;
+Array BC_346 --> PACKED_TEXT_STORAGE TX_PS_104;
 
 
 
